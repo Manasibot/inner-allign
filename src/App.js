@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Hero from './components/Hero';
+import Forest from './components/Forest';
+import Framework from './components/Framework';
+import WhoFor from './components/WhoFor';
+import Experience from './components/Experience';
+import Cohort from './components/Cohort';
+import FinalCTA from './components/FinalCTA';
 import './App.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hero />
+      <Forest />
+      <Framework />
+      <WhoFor />
+      <Experience />
+      <Cohort />
+      <FinalCTA />
+
+      <footer className="footer">
+        <p>© 2026 THE INNER ALIGNMENT EXPERIENCE</p>
+      </footer>
     </div>
   );
 }

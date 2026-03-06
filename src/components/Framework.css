@@ -1,0 +1,42 @@
+.framework-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 3rem auto;
+    text-align: left;
+}
+
+.framework-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.framework-label {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+    min-width: 120px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.framework-arrow {
+    margin: 0 1.5rem;
+    color: var(--text-muted);
+}
+
+.framework-value {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.framework-anim-container {
+    height: 150px;
+}
+
+.framework-msg {
+    color: var(--accent-gold);
+}

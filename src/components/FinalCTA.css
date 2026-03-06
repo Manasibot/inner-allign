@@ -1,0 +1,31 @@
+.final-cta-section {
+    background-color: var(--bg-dark);
+    padding-bottom: 8rem;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.final-tree-container {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+}
+
+.tree-canopy {
+    fill: #2d452d;
+    opacity: 0;
+    transform: scale(0.5);
+    transform-origin: bottom center;
+}
+
+.final-label {
+    color: var(--accent-gold);
+    margin-top: 1rem;
+}

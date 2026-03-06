@@ -1,0 +1,56 @@
+.experience-section {
+    background-color: var(--primary-green);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 4rem auto;
+    padding-left: 50px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent-gold);
+}
+
+.timeline-day {
+    text-align: left;
+    margin-bottom: 4rem;
+    position: relative;
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.timeline-day::after {
+    content: '';
+    position: absolute;
+    left: -37px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    background: var(--accent-gold);
+    border-radius: 50%;
+}
+
+.day-number {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--accent-gold);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.day-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.tree-msg {
+    color: var(--accent-gold);
+}
