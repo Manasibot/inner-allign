@@ -3,7 +3,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Hero from './components/Hero';
 import Forest from './components/Forest';
-import Framework from './components/Framework';
 import WhoFor from './components/WhoFor';
 import Experience from './components/Experience';
 import Cohort from './components/Cohort';
@@ -17,7 +16,6 @@ function App() {
     <div className="App">
       <Hero />
       <Forest />
-      <Framework />
       <WhoFor />
       <Experience />
       <Cohort />

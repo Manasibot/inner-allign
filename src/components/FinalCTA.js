@@ -1,43 +1,47 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './FinalCTA.css';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const FinalCTA = () => {
-    const finalRef = useRef(null);
+    const containerRef = useRef(null);
+    const elementsRef = useRef([]);
 
     useEffect(() => {
-        gsap.to(".canopy-anim", {
-            opacity: 1,
-            scale: 1,
-            stagger: 0.2,
-            duration: 1.5,
-            ease: "back.out(1.7)",
-            scrollTrigger: {
-                trigger: finalRef.current,
-                start: "top 60%",
+        gsap.fromTo(elementsRef.current,
+            { y: 40, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: 1.5, stagger: 0.2, ease: "power3.out",
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top 70%",
+                }
             }
-        });
+        );
     }, []);
 
     return (
-        <section className="section final-cta-section" ref={finalRef}>
-            <div className="hero-content">
-                <h2 className="headline">Your growth season starts here.</h2>
+        <section className="final-cta-section" ref={containerRef}>
+            {/* Background Gold Accent */}
+            <div className="cta-glow"></div>
 
-                <div className="cta-group">
-                    <button className="btn-primary">Apply Now</button>
-                    <button className="btn-secondary">Download Full Program</button>
+            <div className="final-container">
+                <h2 className="final-headline" ref={el => elementsRef.current[0] = el}>
+                    Step into your <span className="serif-italic gold-text">highest self.</span>
+                </h2>
+
+                <p className="final-description" ref={el => elementsRef.current[1] = el}>
+                    The Inner Alignment Experience is strictly limited to 12 women per cohort to ensure deep, transformative connection.
+                </p>
+
+                <div className="cta-group" ref={el => elementsRef.current[2] = el}>
+                    <button className="btn-primary">Apply for Consideration</button>
                 </div>
 
-                <div className="final-tree-container">
-                    <svg viewBox="0 0 200 200" width="100%" height="100%">
-                        <rect x="95" y="100" width="10" height="60" fill="#3d2b1f" />
-                        <circle className="tree-canopy canopy-anim" cx="100" cy="80" r="50" fill="#1a2e1a" />
-                        <circle className="tree-canopy canopy-anim" cx="70" cy="90" r="40" fill="#2d452d" />
-                        <circle className="tree-canopy canopy-anim" cx="130" cy="90" r="40" fill="#2d452d" />
-                        <circle className="tree-canopy canopy-anim" cx="100" cy="60" r="35" fill="#3a5a3a" />
-                    </svg>
-                    <p className="final-label">🌳 Tree fully grown with canopy</p>
+                <div className="cta-secondary-link" ref={el => elementsRef.current[3] = el}>
+                    <button className="btn-text">Download the Private Brochure</button>
                 </div>
             </div>
         </section>

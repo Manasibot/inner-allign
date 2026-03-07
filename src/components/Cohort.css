@@ -1,23 +1,86 @@
-.cohort-description {
-    font-size: 1.4rem;
-    color: var(--text-light);
-    max-width: none;
+.cohort-section {
+    padding: 8rem 2rem;
+    background: var(--bg-dark-alt);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
 }
 
-.cohort-box {
-    background: radial-gradient(circle at center, rgba(197, 160, 89, 0.1) 0%, transparent 70%);
-    padding: 4rem;
-    border-radius: 30px;
-    margin-top: 3rem;
-}
-
-.mycelium-container {
-    height: 150px;
+.cohort-container {
+    max-width: 1200px;
     width: 100%;
+}
+
+.cohort-card {
+    background: var(--primary-green);
+    border: 1px solid rgba(203, 161, 83, 0.15);
+    /* Thin gold border */
+    border-radius: 4px;
+    /* Sharp premium edges */
+    padding: 6rem;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+.cohort-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gold-gradient);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.cohort-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cohort-headline {
+    font-family: var(--font-main);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.cohort-description {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.luxury-network-visual {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
 }
 
-.cohort-label {
-    color: var(--accent-gold);
-    margin-top: 1rem;
+.network-svg {
+    overflow: visible;
+}
+
+@media (max-width: 768px) {
+    .cohort-card {
+        padding: 3rem 1.5rem;
+    }
 }

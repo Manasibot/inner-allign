@@ -1,48 +1,48 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Experience.css';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Experience = () => {
-    const expRef = useRef(null);
+    const sectionRef = useRef(null);
+    const cardsRef = useRef([]);
 
     useEffect(() => {
-        gsap.to(".exp-item", {
-            opacity: 1,
-            x: 0,
-            stagger: 0.3,
-            scrollTrigger: {
-                trigger: expRef.current,
-                start: "top center",
-                end: "bottom center",
-                scrub: 1,
+        gsap.fromTo(cardsRef.current,
+            { y: 80, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: 1.5, stagger: 0.2, ease: "power3.out",
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 60%",
+                }
             }
-        });
+        );
     }, []);
 
     return (
-        <section className="section experience-section" ref={expRef}>
-            <div className="hero-content">
-                <span className="subtitle">The Experience</span>
-                <h2 className="headline">3 Days of Transformation</h2>
+        <section className="exp-section" ref={sectionRef}>
+            <div className="exp-container">
 
-                <div className="timeline">
-                    <div className="timeline-day exp-item">
-                        <span className="day-number">DAY 1</span>
-                        <h3 className="day-title">Know Yourself</h3>
-                    </div>
-                    <div className="timeline-day exp-item">
-                        <span className="day-number">DAY 2</span>
-                        <h3 className="day-title">Show Up Powerfully</h3>
-                    </div>
-                    <div className="timeline-day exp-item">
-                        <span className="day-number">DAY 3</span>
-                        <h3 className="day-title">Own Your Story</h3>
-                    </div>
+                <div className="exp-grid">
+                    {[
+                        { tag: "01", title: "Deeper Understanding", desc: "Of your personal leadership style." },
+                        { tag: "02", title: "Greater Clarity", desc: "About your future direction." },
+                        { tag: "03", title: "Stronger Confidence", desc: "In your presence and voice." }
+                    ].map((item, index) => (
+                        <div className="exp-card" key={index} ref={el => cardsRef.current[index] = el}>
+                            <div className="exp-card-number">{item.tag}</div>
+                            <div className="exp-card-content">
+                                <h3 className="exp-card-title">{item.title}</h3>
+                                <p className="exp-card-desc">{item.desc}</p>
+                                <div className="exp-card-line"></div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
-                <div className="tree-msg">
-                    <p>🌿 Tree growing taller</p>
-                </div>
             </div>
         </section>
     );

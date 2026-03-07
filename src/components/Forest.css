@@ -1,23 +1,127 @@
 .forest-section {
-    background-color: var(--secondary-green);
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 2rem;
+    background: #0A0F0C;
+    color: var(--text-primary);
+    overflow: hidden;
 }
 
-.forest-headline {
-    font-size: 2.5rem;
+.forest-roots-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
 }
 
-.forest-desc {
-    color: var(--text-light);
+.roots-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.root-group {
     opacity: 0.9;
 }
 
-.forest-anim-container {
-    width: 100%;
-    height: 200px;
-    margin-top: 4rem;
+.root-path {
+    vector-effect: non-scaling-stroke;
+    filter: drop-shadow(0 0 3px rgba(100, 80, 50, 0.3));
 }
 
-.root-label {
-    color: var(--accent-gold);
-    margin-top: 1rem;
+.root-hair {
+    vector-effect: non-scaling-stroke;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 2px rgba(80, 60, 30, 0.2));
+}
+
+/* Add subtle texture animation */
+@keyframes rootPulse {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 2px rgba(139, 115, 85, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 6px rgba(180, 150, 100, 0.5));
+    }
+}
+
+.root-group:hover .root-hair {
+    animation: rootPulse 3s infinite ease-in-out;
+}
+
+.forest-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    text-align: center;
+    padding: 4rem 0;
+    background: rgba(10, 15, 12, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    margin: 0 2rem;
+}
+
+.forest-headline {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    color: #F0E6D2;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+    font-family: var(--font-main);
+    font-weight: 300;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    display: block;
+}
+
+.gold-text {
+    background: linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.forest-text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.forest-text p {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #CBB99D;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .forest-section {
+        padding: 4rem 1rem;
+    }
+
+    .forest-content {
+        padding: 2rem 1rem;
+        margin: 0 1rem;
+    }
+
+    .roots-svg {
+        opacity: 0.5;
+    }
 }
