@@ -6,5 +6,5 @@
     height: 100vh;
     z-index: -1;
     pointer-events: none;
-    background: radial-gradient(circle at center, #0B2416 0%, #06110A 100%);
+    background: radial-gradient(circle at center, #1f5e3b 0%, #06110A 100%);
 }
