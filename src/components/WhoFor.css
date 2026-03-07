@@ -103,3 +103,45 @@
 .whofor-item:hover .whofor-line {
     background: var(--accent-gold);
 }
+
+@media (max-width: 768px) {
+    .whofor-section {
+        padding: 6rem 1rem;
+    }
+
+    .whofor-container {
+        gap: 4rem;
+    }
+
+    .whofor-subtitle {
+        margin-bottom: 1.5rem;
+    }
+
+    .whofor-headline {
+        font-size: clamp(2rem, 8vw, 3rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .whofor-right {
+        gap: 1.5rem;
+    }
+
+    .whofor-item {
+        padding: 0.8rem 0;
+        gap: 1.5rem;
+    }
+
+    .whofor-item span {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .whofor-headline {
+        font-size: 1.8rem;
+    }
+
+    .whofor-tag {
+        font-size: 0.75rem;
+    }
+}

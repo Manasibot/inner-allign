@@ -40,3 +40,30 @@
 .framework-msg {
     color: var(--accent-gold);
 }
+
+@media (max-width: 768px) {
+    .framework-list {
+        margin: 2rem auto;
+    }
+
+    .framework-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .framework-label {
+        font-size: 1.2rem;
+        min-width: auto;
+    }
+
+    .framework-arrow {
+        display: none;
+    }
+
+    .framework-value {
+        font-size: 1rem;
+        color: var(--text-muted);
+    }
+}

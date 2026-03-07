@@ -8,24 +8,40 @@ gsap.registerPlugin(ScrollTrigger);
 
 const TreeBackground = () => {
     const mountRef = useRef(null);
+    const animationFrameRef = useRef(null);
+    const rendererRef = useRef(null);
+    const sceneRef = useRef(null);
+    const cameraRef = useRef(null);
+    const scrollTriggerRef = useRef(null);
 
     useEffect(() => {
+        // Prevent multiple instances
+        if (!mountRef.current) return;
+
+        // Clear any existing canvas
+        while (mountRef.current.firstChild) {
+            mountRef.current.removeChild(mountRef.current.firstChild);
+        }
+
         // SCENE SETUP
         const scene = new THREE.Scene();
+        sceneRef.current = scene;
 
         // Add fog to blend ground into background
         scene.fog = new THREE.FogExp2(0x06110a, 0.012);
 
         const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.set(0, 5, 18); // Broader view
+        camera.position.set(0, 5, 18);
         camera.lookAt(0, 0, 0);
+        cameraRef.current = camera;
 
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Limit pixel ratio for performance
         mountRef.current.appendChild(renderer.domElement);
+        rendererRef.current = renderer;
 
-        // LIGHTING (Cinematic sunrise - Upped for visibility)
+        // LIGHTING
         const ambientLight = new THREE.HemisphereLight(0xFBF8F5, 0x06110A, 1.2);
         scene.add(ambientLight);
 
@@ -33,7 +49,12 @@ const TreeBackground = () => {
         dirLight.position.set(10, 20, 10);
         scene.add(dirLight);
 
-        // MATERIALS (Brightened)
+        // Add a second fill light from below
+        const fillLight = new THREE.PointLight(0x4A6B53, 0.5);
+        fillLight.position.set(0, 5, 5);
+        scene.add(fillLight);
+
+        // MATERIALS
         const seedMat = new THREE.MeshStandardMaterial({ color: 0x8B5A2B, roughness: 0.5 });
         const woodMat = new THREE.MeshStandardMaterial({ color: 0x5D4037, roughness: 0.7 });
         const leafMat = new THREE.MeshStandardMaterial({ color: 0x4A6B53, roughness: 0.4, flatShading: true });
@@ -46,7 +67,10 @@ const TreeBackground = () => {
 
         // GROUP FOR ENTIRE TREE
         const treeGroup = new THREE.Group();
-        treeGroup.scale.set(1.5, 1.5, 1.5); // Make it BIGGER
+
+        // Responsive scaling based on screen size
+        const baseScale = Math.min(1.5, window.innerWidth / 800 * 1.5);
+        treeGroup.scale.set(baseScale, baseScale, baseScale);
         scene.add(treeGroup);
 
         // 1. SEED
@@ -121,7 +145,7 @@ const TreeBackground = () => {
         trunk.add(canopyGroup);
 
         // 6. PARTICLES
-        const particleCount = 200;
+        const particleCount = Math.floor(200 * (window.innerWidth / 1920)); // Responsive particle count
         const particleGeo = new THREE.BufferGeometry();
         const particlePos = new Float32Array(particleCount * 3);
         for (let i = 0; i < particleCount; i++) {
@@ -132,9 +156,9 @@ const TreeBackground = () => {
         particleGeo.setAttribute('position', new THREE.BufferAttribute(particlePos, 3));
         const particleMat = new THREE.PointsMaterial({
             color: 0xD4AF37,
-            size: 0.15, // Slightly bigger
+            size: 0.15,
             transparent: true,
-            opacity: 0.6 // More visible
+            opacity: 0.6
         });
         const particles = new THREE.Points(particleGeo, particleMat);
         scene.add(particles);
@@ -146,6 +170,11 @@ const TreeBackground = () => {
         );
         scene.add(impactParticles);
 
+        // Kill any existing ScrollTrigger instances
+        if (scrollTriggerRef.current) {
+            scrollTriggerRef.current.kill();
+        }
+
         // GSAP TIMELINE
         const scrollTl = gsap.timeline({
             scrollTrigger: {
@@ -153,8 +182,10 @@ const TreeBackground = () => {
                 start: "top top",
                 end: "bottom bottom",
                 scrub: 1.5,
+                invalidateOnRefresh: true // Recalculate on resize
             }
         });
+        scrollTriggerRef.current = scrollTl.scrollTrigger;
 
         const animState = {
             seedY: 15,
@@ -253,6 +284,8 @@ const TreeBackground = () => {
         // RENDER LOOP
         let time = 0;
         const animate = () => {
+            if (!sceneRef.current || !cameraRef.current || !rendererRef.current) return;
+
             time += 0.01;
             const pos = particleGeo.attributes.position.array;
             for (let i = 0; i < particleCount; i++) {
@@ -270,29 +303,64 @@ const TreeBackground = () => {
                 });
             }
 
-            renderer.render(scene, camera);
-            requestAnimationFrame(animate);
+            rendererRef.current.render(sceneRef.current, cameraRef.current);
+            animationFrameRef.current = requestAnimationFrame(animate);
         };
 
         animate();
 
         const handleResize = () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
+            if (!cameraRef.current || !rendererRef.current) return;
+
+            cameraRef.current.aspect = window.innerWidth / window.innerHeight;
+            cameraRef.current.updateProjectionMatrix();
+            rendererRef.current.setSize(window.innerWidth, window.innerHeight);
+
+            // Responsive tree scaling
+            const newScale = Math.min(1.5, window.innerWidth / 800 * 1.5);
+            treeGroup.scale.set(newScale, newScale, newScale);
         };
+
         window.addEventListener('resize', handleResize);
 
+        // CLEANUP FUNCTION
         return () => {
             window.removeEventListener('resize', handleResize);
-            if (mountRef.current) mountRef.current.removeChild(renderer.domElement);
+
+            // Kill ScrollTrigger
+            if (scrollTriggerRef.current) {
+                scrollTriggerRef.current.kill();
+            }
+
+            // Cancel animation frame
+            if (animationFrameRef.current) {
+                cancelAnimationFrame(animationFrameRef.current);
+            }
+
+            // Dispose of geometries and materials
             seedMat.dispose();
             woodMat.dispose();
             leafMat.dispose();
             groundMat.dispose();
-            renderer.dispose();
+            particleMat.dispose();
+            impactParticles.material.dispose();
+
+            // Remove canvas
+            if (mountRef.current && rendererRef.current) {
+                mountRef.current.removeChild(rendererRef.current.domElement);
+            }
+
+            // Dispose renderer
+            if (rendererRef.current) {
+                rendererRef.current.dispose();
+            }
+
+            // Clear references
+            sceneRef.current = null;
+            cameraRef.current = null;
+            rendererRef.current = null;
         };
-    }, []);
+    }, []); // Empty dependency array is fine here
 
     return <div className="tree-background" ref={mountRef}></div>;
 };

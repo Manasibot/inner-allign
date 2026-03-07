@@ -2,6 +2,9 @@ body {
     background: radial-gradient(circle at center, #1f5e3b 0%, #06110A 100%);
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .tree-background {
@@ -12,4 +15,13 @@ body {
     bottom: 0;
     z-index: -1;
     pointer-events: none;
+    contain: strict;
+    /* Improves performance */
+}
+
+/* Ensure canvas doesn't overflow */
+.tree-background canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
 }

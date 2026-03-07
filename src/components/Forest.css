@@ -113,15 +113,35 @@
 
 @media (max-width: 768px) {
     .forest-section {
-        padding: 4rem 1rem;
+        padding: 6rem 1rem;
     }
 
     .forest-content {
-        padding: 2rem 1rem;
+        padding: 3rem 1.5rem;
         margin: 0 1rem;
     }
 
+    .forest-headline {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+        margin-bottom: 2rem;
+    }
+
+    .forest-text p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
     .roots-svg {
-        opacity: 0.5;
+        opacity: 0.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .forest-section {
+        padding: 4rem 1rem;
+    }
+
+    .forest-headline {
+        font-size: 2rem;
     }
 }

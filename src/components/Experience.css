@@ -94,3 +94,39 @@
 .exp-card:hover .exp-card-line {
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    .exp-section {
+        padding: 6rem 1rem;
+    }
+
+    .exp-card {
+        padding: 4rem 1.5rem;
+        border-right: none;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .exp-card:last-child {
+        border-bottom: none;
+    }
+
+    .exp-card-number {
+        font-size: 6rem;
+        margin-bottom: -3rem;
+    }
+
+    .exp-card-title {
+        font-size: 1.5rem;
+    }
+
+    .exp-card-desc {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .exp-card-number {
+        font-size: 5rem;
+    }
+}

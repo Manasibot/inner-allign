@@ -97,3 +97,25 @@
     transform: scaleX(1);
     transform-origin: left;
 }
+
+@media (max-width: 768px) {
+    .final-cta-section {
+        padding: 8rem 1.5rem;
+    }
+
+    .final-headline {
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
+        margin-bottom: 2rem;
+    }
+
+    .final-description {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .final-headline {
+        font-size: 2rem;
+    }
+}

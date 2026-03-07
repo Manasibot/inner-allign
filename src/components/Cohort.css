@@ -80,6 +80,37 @@
 }
 
 @media (max-width: 768px) {
+    .cohort-section {
+        padding: 6rem 1rem;
+    }
+
+    .cohort-card {
+        padding: 4rem 2rem;
+    }
+
+    .card-content {
+        gap: 3rem;
+    }
+
+    .cohort-headline {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .cohort-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .luxury-network-visual {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cohort-section {
+        padding: 4rem 1rem;
+    }
+
     .cohort-card {
         padding: 3rem 1.5rem;
     }

@@ -298,55 +298,69 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-content {
+        padding: 0 15px;
+    }
+
     .hero-title {
-        font-size: clamp(24px, 5vw, 40px);
+        font-size: clamp(20px, 5vw, 40px);
         letter-spacing: 4px;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
 
     .hero-headline {
-        font-size: clamp(36px, 8vw, 60px);
-        margin-bottom: 20px;
+        font-size: clamp(32px, 8vw, 60px);
+        margin-bottom: 15px;
     }
 
     .hero-subtitle {
-        font-size: clamp(14px, 2.5vw, 20px);
+        font-size: clamp(12px, 2.5vw, 18px);
         letter-spacing: 2px;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     .hero-quote p {
-        font-size: clamp(14px, 2vw, 18px);
+        font-size: clamp(14px, 2.5vw, 18px);
+        padding: 0 10px;
     }
 
     .rising-indicator {
         right: 15px;
         height: 80px;
     }
+
+    .hero-decoration {
+        bottom: 30px;
+        gap: 20px;
+    }
 }
 
 /* Small mobile devices */
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 22px;
-        letter-spacing: 3px;
+        font-size: 18px;
+        letter-spacing: 2px;
     }
 
     .hero-headline {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .hero-subtitle {
-        font-size: 14px;
+        font-size: 12px;
         letter-spacing: 1px;
     }
 
     .hero-quote p {
-        font-size: 14px;
-        padding: 0 15px;
+        font-size: 13px;
+        padding: 0 5px;
     }
 
     .rising-indicator {
+        display: none;
+    }
+
+    .hero-decoration {
         display: none;
     }
 }
