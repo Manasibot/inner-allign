@@ -1,6 +1,6 @@
 .whofor-section {
     padding: 10rem 2rem;
-    background: var(--bg-dark);
+    background: transparent;
     color: var(--text-primary);
     display: flex;
     justify-content: center;

@@ -1,6 +1,6 @@
 .exp-section {
     padding: 10rem 2rem;
-    background: var(--bg-dark);
+    background: transparent;
     color: var(--text-primary);
     min-height: 80vh;
     display: flex;

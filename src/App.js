@@ -7,6 +7,7 @@ import WhoFor from './components/WhoFor';
 import Experience from './components/Experience';
 import Cohort from './components/Cohort';
 import FinalCTA from './components/FinalCTA';
+import TreeBackground from './components/TreeBackground';
 import './App.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -14,6 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   return (
     <div className="App">
+      <TreeBackground />
       <Hero />
       <Forest />
       <WhoFor />

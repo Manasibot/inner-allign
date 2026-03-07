@@ -1,6 +1,6 @@
 .final-cta-section {
     padding: 12rem 2rem;
-    background: var(--bg-dark);
+    background: transparent;
     color: var(--text-primary);
     text-align: center;
     display: flex;

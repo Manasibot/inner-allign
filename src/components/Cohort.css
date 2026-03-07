@@ -1,6 +1,6 @@
 .cohort-section {
     padding: 8rem 2rem;
-    background: var(--bg-dark-alt);
+    /* background: transparent; */
     color: var(--text-primary);
     display: flex;
     justify-content: center;
@@ -14,17 +14,17 @@
     width: 100%;
 }
 
-.cohort-card {
-    background: var(--primary-green);
+/* .cohort-card {
+  
     border: 1px solid rgba(203, 161, 83, 0.15);
-    /* Thin gold border */
+  
     border-radius: 4px;
-    /* Sharp premium edges */
+  
     padding: 6rem;
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
     position: relative;
     overflow: hidden;
-}
+} */
 
 .cohort-card::before {
     content: "";

@@ -33,7 +33,7 @@
 body {
   margin: 0;
   font-family: var(--font-main);
-  background-color: var(--bg-dark);
+  background-color: transparent !important;
   color: var(--text-light);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;

@@ -1,0 +1,10 @@
+.tree-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle at center, #0B2416 0%, #06110A 100%);
+}
