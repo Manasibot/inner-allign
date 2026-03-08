@@ -71,7 +71,7 @@
     text-align: center;
     max-width: 1500px;
     padding: 0 20px;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 /* Title styling */
@@ -82,9 +82,9 @@
     margin-bottom: 20px;
     letter-spacing: 8px;
     text-transform: uppercase;
-    font-family: 'Playfair Display', serif;
-    color: #ffffff;
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    font-family: var(--font-serif);
+    color: var(--text-primary);
+    text-shadow: 0 0 20px var(--color-gold-soft);
     overflow: hidden;
 }
 
@@ -101,10 +101,10 @@
     margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     perspective: 1000px;
-    color: #d4af37;
-    text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    color: var(--accent-gold);
+    text-shadow: 0 0 30px var(--color-gold-soft);
     overflow: hidden;
 }
 
@@ -142,11 +142,11 @@
 .hero-quote p {
     font-size: clamp(16px, 2.5vw, 24px);
     line-height: 1.6;
-    color: #a0a0a0;
+    color: var(--text-muted);
     font-weight: 300;
     letter-spacing: 1px;
     font-style: italic;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-serif);
     position: relative;
     padding: 0 20px;
 }

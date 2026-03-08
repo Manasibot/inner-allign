@@ -28,7 +28,7 @@ const TreeBackground = () => {
         sceneRef.current = scene;
 
         // Add fog to blend ground into background
-        scene.fog = new THREE.FogExp2(0x06110a, 0.012);
+        scene.fog = new THREE.FogExp2(0xF7F4F0, 0.012);
 
         const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
         camera.position.set(0, 5, 18);
@@ -55,11 +55,11 @@ const TreeBackground = () => {
         scene.add(fillLight);
 
         // MATERIALS
-        const seedMat = new THREE.MeshStandardMaterial({ color: 0x8B5A2B, roughness: 0.5 });
-        const woodMat = new THREE.MeshStandardMaterial({ color: 0x5D4037, roughness: 0.7 });
-        const leafMat = new THREE.MeshStandardMaterial({ color: 0x4A6B53, roughness: 0.4, flatShading: true });
+        const seedMat = new THREE.MeshStandardMaterial({ color: 0xC5A059, roughness: 0.5 });
+        const woodMat = new THREE.MeshStandardMaterial({ color: 0x3D342D, roughness: 0.7 });
+        const leafMat = new THREE.MeshStandardMaterial({ color: 0x4A5D4E, roughness: 0.4, flatShading: true });
         const groundMat = new THREE.MeshStandardMaterial({
-            color: 0x1A2E21,
+            color: 0xEBE3D5,
             roughness: 1,
             transparent: true,
             opacity: 0.3
@@ -67,6 +67,7 @@ const TreeBackground = () => {
 
         // GROUP FOR ENTIRE TREE
         const treeGroup = new THREE.Group();
+        treeGroup.position.x = -6; // Move tree to the left
 
         // Responsive scaling based on screen size
         const baseScale = Math.min(1.5, window.innerWidth / 800 * 1.5);
@@ -155,18 +156,17 @@ const TreeBackground = () => {
         }
         particleGeo.setAttribute('position', new THREE.BufferAttribute(particlePos, 3));
         const particleMat = new THREE.PointsMaterial({
-            color: 0xD4AF37,
+            color: 0xC5A059, // Gold particles
             size: 0.15,
             transparent: true,
-            opacity: 0.6
+            opacity: 0.4
         });
         const particles = new THREE.Points(particleGeo, particleMat);
         scene.add(particles);
 
-        // DUST IMPACT
         const impactParticles = new THREE.Points(
             new THREE.BufferGeometry().setAttribute('position', new THREE.BufferAttribute(new Float32Array(30 * 3), 3)),
-            new THREE.PointsMaterial({ color: 0x8B9D8B, size: 0.15, transparent: true, opacity: 0 })
+            new THREE.PointsMaterial({ color: 0x3D342D, size: 0.15, transparent: true, opacity: 0 })
         );
         scene.add(impactParticles);
 
@@ -277,7 +277,7 @@ const TreeBackground = () => {
             onUpdate: () => {
                 camera.position.y = animState.cameraY;
                 camera.position.z = animState.cameraZ;
-                camera.lookAt(0, 4, 0);
+                camera.lookAt(-2, 4, 0); // Look slightly towards the tree
             }
         }, 3.5);
 

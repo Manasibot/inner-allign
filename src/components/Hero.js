@@ -42,11 +42,12 @@ const Hero = () => {
       transformOrigin: "50% 50% -30px"
     });
 
+    // Set headline (EXPERIENCE) to start with the same properties as subtitle
     gsap.set(chars, {
-      y: 300,  // Start far below
+      y: 300,  // Start below
       opacity: 0,
-      rotationX: -90,
-      transformOrigin: "50% 50% -50px"
+      scale: 0.5,
+      filter: "blur(10px)"
     });
 
     gsap.set(subtitleChars, {
@@ -90,46 +91,47 @@ const Hero = () => {
         ease: "power3.out"
       }
     })
-      // Animate headline letters - rising from below with more drama
-      .to(chars, {
-        y: 0,  // Rise to final position
-        opacity: 1,
-        rotationX: 0,
-        duration: 2.2,
-        stagger: {
-          amount: 1.5,
-          from: "edges",
-          grid: "auto",
-          ease: "back.out(1.5)"
-        }
-      }, "-=0.8")
-      // Animate subtitle - rising and aligning
-      .to(subtitleChars, {
-        y: 0,  // Rise to final position
-        opacity: 1,
-        scale: 1,
-        filter: "blur(0px)",
-        duration: 1.8,
-        stagger: {
-          amount: 1,
-          from: "center",
-          grid: "auto",
-          ease: "power3.out"
-        }
-      }, "-=1")
-      // Animate quote - rising last
-      .to(quoteRef.current, {
-        y: 0,  // Rise to final position
-        opacity: 1,
-        duration: 1.5,
+    // Animate headline letters (EXPERIENCE) - now matching subtitle animation
+    .to(chars, {
+      y: 0,  // Rise to final position
+      opacity: 1,
+      scale: 1,
+      filter: "blur(0px)",
+      duration: 2.2,
+      stagger: {
+        amount: 1.5,
+        from: "edges",
+        grid: "auto",
         ease: "power3.out"
-      }, "-=0.8")
-      // Animate gradient glow
-      .to(gradientRef.current, {
-        opacity: 1,
-        scale: 1,
-        duration: 2.5
-      }, "-=2");
+      }
+    }, "-=0.8")
+    // Animate subtitle - rising and aligning
+    .to(subtitleChars, {
+      y: 0,  // Rise to final position
+      opacity: 1,
+      scale: 1,
+      filter: "blur(0px)",
+      duration: 1.8,
+      stagger: {
+        amount: 1,
+        from: "center",
+        grid: "auto",
+        ease: "power3.out"
+      }
+    }, "-=1")
+    // Animate quote - rising last
+    .to(quoteRef.current, {
+      y: 0,  // Rise to final position
+      opacity: 1,
+      duration: 1.5,
+      ease: "power3.out"
+    }, "-=0.8")
+    // Animate gradient glow
+    .to(gradientRef.current, {
+      opacity: 1,
+      scale: 1,
+      duration: 2.5
+    }, "-=2");
 
     // Particle Animation on Canvas
     const canvas = canvasRef.current;
@@ -259,13 +261,6 @@ const Hero = () => {
       <div className="rising-indicator">
         <div className="rising-line"></div>
         <div className="rising-dot"></div>
-      </div>
-
-      {/* Decorative elements */}
-      <div className="hero-decoration">
-        <div className="decoration-circle"></div>
-        <div className="decoration-line"></div>
-        <div className="decoration-circle"></div>
       </div>
     </section>
   );

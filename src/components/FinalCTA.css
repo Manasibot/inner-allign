@@ -18,7 +18,7 @@
     transform: translate(-50%, -50%);
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(203, 161, 83, 0.05) 0%, rgba(6, 17, 10, 0) 70%);
+    background: radial-gradient(circle, var(--color-gold-soft) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 0;
@@ -32,9 +32,9 @@
 }
 
 .final-headline {
-    font-family: var(--font-main);
+    font-family: var(--font-heading);
     font-size: clamp(3rem, 6vw, 5rem);
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: -2px;
     color: var(--text-primary);
     margin-bottom: 2.5rem;
@@ -90,7 +90,7 @@
 }
 
 .btn-text:hover {
-    color: var(--accent-gold-light);
+    color: var(--accent-gold);
 }
 
 .btn-text:hover::after {

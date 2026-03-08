@@ -1,40 +1,35 @@
 :root {
-  /* Luxury Bottle Green & Gold Palette */
-  --bg-dark: #06110A;
-  /* Extremely dark bottle green, almost black */
-  --bg-dark-alt: #09170D;
-  /* Slightly lighter bottle green */
-  --primary-green: #0C2114;
-  /* Deep bottle green for cards */
-  --accent-gold-light: #F4E3A6;
-  /* Pale Gold */
-  --accent-gold: #CBA153;
-  /* Rich Gold */
-  --accent-gold-dark: #8F6B29;
-  /* Deep Antique Gold */
+  /* Contemporary Light Elegance Palette */
+  --color-stone: #F7F4F0;
+  --color-stone-dark: #EBE3D5;
+  --color-alabaster: #FCFAF9;
+  --color-espresso: #1A120B;
+  --color-espresso-muted: #3D342D;
+  --color-gold: #C5A059;
+  --color-gold-muted: #A68A4A;
+  --color-gold-soft: rgba(197, 160, 89, 0.1);
 
-  /* Text */
-  --text-primary: #F7F5F0;
-  /* Warm off-white / pearl */
-  --text-muted: #8B9D8B;
-  /* Sage-tinted grey */
-
-  /* Gradients */
-  --gold-gradient: linear-gradient(135deg, var(--accent-gold-dark) 0%, var(--accent-gold) 35%, var(--accent-gold-light) 50%, var(--accent-gold) 70%, var(--accent-gold-dark) 100%);
-  --green-gradient: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-alt) 100%);
+  /* Functional Mappings */
+  --bg-main: var(--color-stone);
+  --bg-alt: var(--color-stone-dark);
+  --bg-card: var(--color-alabaster);
+  --text-primary: var(--color-espresso);
+  --text-muted: var(--color-espresso-muted);
+  --accent-gold: var(--color-gold);
 
   /* Typography */
-  --font-main: 'Outfit', 'Inter', -apple-system, sans-serif;
+  --font-main: 'Inter', -apple-system, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
   --font-serif: 'Playfair Display', serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
 body {
   margin: 0;
   font-family: var(--font-main);
-  background-color: transparent !important;
-  color: var(--text-light);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -43,9 +38,10 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--font-serif);
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-weight: 500;
   margin: 0;
+  color: var(--text-primary);
 }
 
 code {
@@ -65,13 +61,13 @@ code {
 }
 
 .btn-primary {
-  background: var(--gold-gradient);
-  color: var(--bg-dark);
+  background: var(--accent-gold);
+  color: var(--bg-main);
   padding: 1.1rem 3rem;
   border-radius: 4px;
   /* Sharp, high-end corners */
   text-decoration: none;
-  font-family: var(--font-main);
+  font-family: var(--font-heading);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -81,7 +77,7 @@ code {
   cursor: pointer;
   margin-top: 2rem;
   display: inline-block;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2);
   position: relative;
   overflow: hidden;
 }

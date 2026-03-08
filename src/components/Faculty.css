@@ -1,0 +1,152 @@
+.faculty-section {
+    padding: 10rem 2rem;
+    /* background-color: var(--color-stone-dark); */
+    position: relative;
+    overflow: hidden;
+}
+
+.faculty-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faculty-layout {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+
+.faculty-image-container {
+    flex: 1;
+    position: relative;
+    max-width: 500px;
+}
+
+.faculty-image-placeholder {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: var(--color-espresso);
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(26, 18, 11, 0.4));
+}
+
+.image-accent-frame {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--accent-gold);
+    z-index: 1;
+}
+
+.faculty-text-content {
+    flex: 1.2;
+}
+
+.faculty-subtitle {
+    display: block;
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.faculty-name {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.faculty-title {
+    font-family: var(--font-main);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--accent-gold);
+    margin-bottom: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.faculty-bio {
+    margin-bottom: 3rem;
+}
+
+.faculty-bio p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.faculty-stats {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-gold-soft);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-family: var(--font-main);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-gold);
+}
+
+.faculty-btn {
+    margin-top: 0;
+}
+
+.serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+    .faculty-layout {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .faculty-image-container {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .faculty-text-content {
+        text-align: center;
+    }
+
+    .faculty-stats {
+        justify-content: center;
+        gap: 3rem;
+    }
+}
