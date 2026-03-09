@@ -52,7 +52,7 @@ export default function AlignmentCore({ scrollProgress = 0 }: { scrollProgress?:
                 Opacity set to fade in after the Hero section.
             */}
             <motion.div
-                className="relative w-[60vmin] h-[60vmin] flex items-center justify-center pointer-events-none"
+                className="relative w-[85vmin] h-[85vmin] flex items-center justify-center pointer-events-none"
                 style={{
                     y: yTransform,
                     scale: zScale,
@@ -61,18 +61,19 @@ export default function AlignmentCore({ scrollProgress = 0 }: { scrollProgress?:
                 }}
             >
                 <motion.img
-                    src="/radiant_compass_markings.png"
+                    src="/tree_goddess.png"
                     alt="The Radiant Compass"
-                    className="w-full h-full object-contain origin-center mix-blend-multiply opacity-85"
+                    className="w-full h-full object-contain origin-center"
+                    style={{ opacity: 0.4 }}
 
-                    // Healing 360-degree slow rotation
+                    // Smoother, slower heartbeat pulse
                     animate={{
-                        rotate: 360,
+                        scale: [1, 1.05, 1],
                     }}
                     transition={{
-                        duration: 180, // Meditative, calm rotation
+                        duration: 8,
                         repeat: Infinity,
-                        ease: "linear",
+                        ease: "easeInOut"
                     }}
                 />
 
