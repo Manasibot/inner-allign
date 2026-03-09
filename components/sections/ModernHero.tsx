@@ -64,21 +64,21 @@ export default function ModernHero() {
 
                     <div className="flex flex-col gap-5">
                         <div className="max-w-[540px]">
-                            <div className="w-16 md:w-20 h-[1px] bg-gold mb-3 md:mb-5" />
-                            <p className="text-espresso text-[clamp(18px,min(1.5vw,2vh),20px)] leading-snug font-medium mb-3">
+                            <p className="text-espresso text-[clamp(18px,min(1.5vw,2vh),20px)] leading-snug font-medium mb-3 italic">
                                 When clarity within grows, influence naturally follows.
                             </p>
+                            <div className="w-16 md:w-20 h-[1px] bg-gold mb-3 md:mb-5" />
                             <p className="text-espresso/60 text-[clamp(14px,min(0.9vw,1.5vh),16px)] leading-relaxed font-light">
-                                This is not a program for women who are broken. This is a program for women who are already powerful — and who sense, with absolute clarity, that there is more.
+                                This experience is not about fixing what is missing. It is designed for women who are already accomplished — and who recognise that there is still more of their potential, clarity, and influence ready to be expressed.
                             </p>
                             <div className="w-full h-[1px] bg-espresso/5 mt-8 mb-4" />
                         </div>
 
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                            <button className="btn-gold group flex items-center justify-center gap-3 min-w-[180px] md:min-w-[220px] py-2 md:py-3 cursor-pointer relative z-20">
+                            <a href="#apply" className="btn-gold group flex items-center justify-center gap-3 min-w-[180px] md:min-w-[220px] py-2 md:py-3 cursor-pointer relative z-20">
                                 Reserve Your Seat
                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                            </button>
+                            </a>
                             <div className="flex flex-col justify-center px-1">
                                 <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-espresso/40 block">Location</span>
                                 <span className="text-espresso font-semibold text-base md:text-lg">Dubai</span>
@@ -159,7 +159,7 @@ export default function ModernHero() {
             >
                 <div className="flex gap-10 md:gap-20 mb-4 md:mb-0">
                     <div>
-                        <span className="text-gold font-outfit font-bold text-[20px] md:text-[24px] block leading-none">May &lsquo;25</span>
+                        <span className="text-gold font-outfit font-bold text-[20px] md:text-[24px] block leading-none">May &lsquo;26</span>
                         <span className="text-espresso/40 text-[9px] md:text-[10px] uppercase tracking-widest font-bold mt-1 md:mt-2 block">Next Cohort</span>
                     </div>
                     <div>

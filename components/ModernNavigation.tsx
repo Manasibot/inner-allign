@@ -24,11 +24,12 @@ export default function ModernNavigation() {
             transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
         >
             <div className="max-w-content mx-auto flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                    <div className="w-6 h-6 bg-espresso rounded-sm rotate-45" />
-                    <span className="font-outfit font-semibold text-[16px] text-espresso uppercase tracking-tight">
-                        The Inner <span className="text-gold italic">Alignment</span>
-                    </span>
+                <div className="flex items-center">
+                    <img
+                        src="/logo.png"
+                        alt="The Inner Alignment"
+                        className="h-10 md:h-12 w-auto object-contain"
+                    />
                 </div>
 
                 {/* Desktop Links */}
@@ -42,9 +43,9 @@ export default function ModernNavigation() {
                             {item}
                         </a>
                     ))}
-                    <button className="btn-gold !py-2.5 !px-6 !text-[12px]">
-                        Apply for Sept &lsquo;25
-                    </button>
+                    <a href="#apply" className="btn-gold !py-2.5 !px-6 !text-[12px]">
+                        Apply for May &lsquo;26
+                    </a>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -76,9 +77,9 @@ export default function ModernNavigation() {
                                     {item}
                                 </a>
                             ))}
-                            <button className="btn-gold w-full">
-                                Apply for Sept &lsquo;25
-                            </button>
+                            <a href="#apply" onClick={() => setIsMobileMenuOpen(false)} className="btn-gold w-full text-center">
+                                Apply for May &lsquo;26
+                            </a>
                         </div>
                     </motion.div>
                 )}

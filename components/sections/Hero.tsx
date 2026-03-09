@@ -74,6 +74,10 @@ export default function Hero() {
                         Clarity · Confidence · Influence
                     </p>
 
+                    <p className="text-stone text-[20px] mb-4 italic">
+                        When clarity within grows, influence naturally follows.
+                    </p>
+
                     <div
                         ref={ruleRef}
                         className="h-[1px] bg-gold mb-8"
@@ -81,8 +85,8 @@ export default function Hero() {
                     />
 
                     <p ref={bodyRef} className="text-body-lg text-stone max-w-[520px] mb-10">
-                        This is not a program for women who are broken. This is a program for women who are already
-                        powerful — and who sense, with absolute clarity, that there is more.
+                        This experience is not about fixing what is missing. It is designed for women who are already
+                        accomplished — and who recognise that there is still more of their potential, clarity, and influence ready to be expressed.
                     </p>
 
                     <div ref={ctaRef}>

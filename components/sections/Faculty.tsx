@@ -7,13 +7,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const credentials = [
-    'EQ-i 2.0 Leadership',
-    'Hogan HPI · HDS · MVPI',
-    'ICF Professional Certified Coach',
-    'Transactional Analysis',
-    'Psychometric Assessment',
-    'Executive Presence',
-    'Cross-Cultural Leadership',
+    'Learning Solutions',
+    'NLP Practitioner',
+    'Psychometric Analyst',
+    'Behavioural Trainer',
+    'Image Consultant',
+    'Talent Measurement Assessor',
+    'Experience Design Consultant',
 ];
 
 const bottomStats = [
@@ -78,12 +78,13 @@ export default function Faculty() {
                     <div className="faculty-portrait md:w-[42%] md:pr-10 md:border-r-2 border-divider">
                         {/* Portrait placeholder */}
                         <div
-                            className="relative w-full max-w-[480px] mx-auto md:mx-0 aspect-[3/4] bg-pale-sage flex items-center justify-center overflow-hidden"
-                            style={{ mixBlendMode: 'multiply' }}
+                            className="relative w-full max-w-[480px] mx-auto md:mx-0 aspect-[3/4] bg-pale-sage overflow-hidden"
                         >
-                            <span className="font-satoshi text-gray text-[12px] tracking-wide text-center px-4">
-                                FACULTY PORTRAIT
-                            </span>
+                            <img
+                                src="/Ramona Rodrigues.png"
+                                alt="Ramona Faria Rodrigues"
+                                className="absolute inset-0 w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700"
+                            />
                             {/* Overlay for warm tone */}
                             <div
                                 className="absolute inset-0 bg-pale-sage/10 pointer-events-none"
@@ -92,9 +93,9 @@ export default function Faculty() {
                         </div>
                         {/* <!-- Replace with editorial portrait: natural light, 3:4 ratio, non-performative --> */}
                         <div className="mt-4 max-w-[480px] mx-auto md:mx-0">
-                            <p className="font-canela text-deep-purple text-[22px]">[Facilitator Name]</p>
+                            <p className="font-canela text-deep-purple text-[22px]">Ramona Faria Rodrigues</p>
                             <p className="font-satoshi text-gray text-[13px] tracking-[0.04em]">
-                                Executive Leadership Coach · EQ-i 2.0 Certified · Hogan Accredited Practitioner
+                                Certified Psychometric Analyst · Behavioural Trainer · NLP Practitioner
                             </p>
                         </div>
                     </div>
@@ -106,19 +107,20 @@ export default function Faculty() {
                             The Botanist Behind the Framework
                         </p>
                         <h2 className="faculty-item font-canela text-deep-purple text-[44px] md:text-[64px] tracking-tight mb-4">
-                            [Facilitator Name]
+                            Ramona <br />
+                            Faria Rodrigues
                         </h2>
 
                         {/* Gold Credential Bar */}
                         <div className="faculty-item bg-light-gold px-5 py-3 mb-8">
                             <span className="font-satoshi font-bold text-gold text-[11px] md:text-[12px] uppercase tracking-[0.1em]">
-                                EQ-i 2.0 Certified · Hogan Accredited · PCC (ICF) · [Years] Years Practice · [N] Countries
+                                Certified Psychometric Analyst · NLP Practitioner · Behavioural Trainer
                             </span>
                         </div>
 
                         {/* Philosophy Quote */}
                         <div className="faculty-philosophy border-l-[3px] border-l-gold pl-6 mb-8">
-                            <p className="font-cormorant italic text-deep-purple text-[19px] md:text-[22px] leading-relaxed">
+                            <p className="font-cormorant italic text-deep-purple text-[16px] md:text-[18px] leading-relaxed">
                                 &ldquo;I do not believe in transformational experiences that leave women inspired but unequipped.
                                 Inspiration without architecture produces nothing that lasts. Every element of The Inner Alignment
                                 Experience is designed the way I design a root system: precisely, with the end structure in mind, in full
@@ -128,10 +130,7 @@ export default function Faculty() {
 
                         {/* Career Paragraph */}
                         <p className="faculty-item font-satoshi text-charcoal text-[15px] md:text-[16px] leading-[1.7] mb-6">
-                            [Facilitator Name] has worked with leaders across industries in [N] countries over [N] years. Her clients
-                            include C-suite executives, board directors, and founders of category-defining companies. She holds
-                            [credentials] and is one of a small number of practitioners globally certified in both the EQ-i 2.0
-                            Leadership Report and the full Hogan Assessment suite.
+                            Ramona Faria Rodrigues is a Learning & Development professional and an Experience Design Consultant who excels in creating Learning Solutions, Content and Training Delivery. She is a Certified Psychometric Analyst, a Behavioural Trainer, an NLP Practitioner, a Certified Talent Measurement Assessor, and an Image Consultant.
                         </p>
 
                         {/* Methodology Note */}

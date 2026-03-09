@@ -8,9 +8,11 @@ export default function ModernFooter() {
             <div className="max-w-content mx-auto">
                 <div className="grid md:grid-cols-4 gap-12 mb-20">
                     <div className="col-span-2">
-                        <span className="text-espresso font-outfit font-bold text-[24px] tracking-tighter block mb-6 uppercase">
-                            The Inner <span className="text-gold italic">Alignment</span>
-                        </span>
+                        <img
+                            src="/logo.png"
+                            alt="The Inner Alignment"
+                            className="h-16 md:h-20 w-auto object-contain mb-6"
+                        />
                         <p className="text-espresso/40 text-[13px] max-w-[300px] leading-relaxed uppercase tracking-widest font-bold">
                             An elite 3-day leadership intensive for women architecting the next era of influence.
                         </p>

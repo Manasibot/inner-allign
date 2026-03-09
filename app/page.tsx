@@ -11,6 +11,7 @@ import ModernNetwork from '@/components/sections/ModernNetwork';
 import ModernOutcomes from '@/components/sections/ModernOutcomes';
 import ModernApplication from '@/components/sections/ModernApplication';
 import ModernFaculty from '@/components/sections/ModernFaculty';
+import ModernFAQ from '@/components/sections/ModernFAQ';
 import ModernFooter from '@/components/sections/ModernFooter';
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
         <ModernOutcomes />
         <ModernApplication />
         <ModernFaculty />
+        <ModernFAQ />
         <ModernFooter />
       </main>
     </ModernUIWrapper>

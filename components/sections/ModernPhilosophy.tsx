@@ -14,7 +14,7 @@ export default function ModernPhilosophy() {
         {
             title: "Innate Influence",
             paragraphs: [
-                "The Inner Alignment Experience is built on this truth. This is not a program for women who are broken. This is a program for women who are already powerful — and who sense, with absolute clarity, that there is more.",
+                "This experience is not about fixing what is missing. It is designed for women who are already accomplished — and who recognise that there is still more of their potential, clarity, and influence ready to be expressed.",
                 "More depth. More reach. More of themselves waiting to be expressed."
             ],
         },
