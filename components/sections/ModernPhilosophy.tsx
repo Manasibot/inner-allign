@@ -27,7 +27,7 @@ export default function ModernPhilosophy() {
     ];
 
     return (
-        <section id="philosophy" className="py-20 md:py-32 px-6 relative bg-alabaster/50">
+        <section id="philosophy" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 relative bg-alabaster/50">
             {/* Architectural Grid Underlay */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{ backgroundImage: 'radial-gradient(var(--color-espresso) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -79,8 +79,8 @@ export default function ModernPhilosophy() {
                                 <span className="text-gold group-hover:text-white font-outfit text-[12px] font-bold">0{idx + 1}</span>
                             </div>
 
-                            <h3 className="text-[24px] font-outfit font-semibold text-espresso mb-4 shrink-0">{pillar.title}</h3>
-                            <div className="w-12 h-px bg-gold/30 mb-6" />
+                            <h3 className="text-[24px] font-outfit font-semibold text-espresso mb-6 shrink-0">{pillar.title}</h3>
+                            <div className="w-12 h-[2px] bg-gold/40 mb-6" />
 
                             <div className="space-y-4 flex-grow">
                                 {pillar.paragraphs.map((para, pIdx) => (

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function ModernFaculty() {
     return (
-        <section id="faculty" className="py-20 md:py-32 px-6 relative overflow-hidden">
+        <section id="faculty" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 relative overflow-hidden">
             <div className="max-w-content mx-auto">
                 <div className="grid lg:grid-cols-2 gap-24 items-center mb-16">
                     <div className="relative">

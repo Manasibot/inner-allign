@@ -11,7 +11,7 @@ export default function ModernApplication() {
     ];
 
     return (
-        <section id="apply" className="py-20 md:py-32 px-6 bg-stone-dark/30 relative">
+        <section id="apply" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-stone-dark/30 relative">
             <div className="max-w-content mx-auto">
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                     <div>

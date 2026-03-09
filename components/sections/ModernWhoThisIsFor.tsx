@@ -30,7 +30,7 @@ export default function ModernWhoThisIsFor() {
     ];
 
     return (
-        <section id="who" className="py-20 md:py-32 px-6 bg-stone relative overflow-hidden">
+        <section id="who" className="pt-20 md:pt-32 pb-16 md:pb-24 px-6 bg-stone relative overflow-hidden">
             {/* Architectural Background Elements */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{ backgroundImage: 'radial-gradient(var(--color-espresso) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -74,18 +74,18 @@ export default function ModernWhoThisIsFor() {
                     </motion.p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 mb-24">
+                <div className="grid md:grid-cols-2 gap-8 mb-12">
                     {readiness.map((card, idx) => (
                         <motion.div
                             key={card.title}
-                            className={`glass-card flex flex-col items-start !bg-white/40 !p-10 border-espresso/5 shadow-sm h-full relative group overflow-hidden`}
+                            className={`glass-card flex flex-col items-start !bg-white/40 !p-8 border-espresso/5 shadow-sm relative group overflow-hidden`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
                         >
-                            {/* Card Watermark */}
-                            <div className="absolute top-10 right-10 text-[120px] font-outfit font-bold text-espresso/[0.02] leading-none pointer-events-none group-hover:text-gold/[0.04] transition-colors duration-700">
+                            {/* Card Watermark - Increased visibility */}
+                            <div className="absolute top-10 right-10 text-[120px] font-outfit font-bold text-gold/[0.08] leading-none pointer-events-none group-hover:text-gold/[0.15] transition-all duration-700">
                                 0{idx + 1}
                             </div>
 
@@ -93,10 +93,10 @@ export default function ModernWhoThisIsFor() {
                             <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-gold/20" />
                             <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-gold/20" />
 
-                            <h3 className="text-[24px] font-outfit font-semibold text-espresso mb-4 uppercase tracking-tight relative z-10">
+                            <h3 className="text-[24px] font-outfit font-semibold text-espresso mb-6 uppercase tracking-tight relative z-10">
                                 {card.title}
                             </h3>
-                            <div className="w-12 h-px bg-gold/30 mb-8 relative z-10" />
+                            <div className="w-12 h-[2px] bg-gold/40 mb-6 relative z-10" />
 
                             <ul className="space-y-6 relative z-10">
                                 {card.items.map((item, iIdx) => (
@@ -104,7 +104,7 @@ export default function ModernWhoThisIsFor() {
                                         <span className={`shrink-0 w-6 h-6 flex items-center justify-center rounded-sm border border-gold/10 text-[10px] font-bold transition-all duration-300 group-hover/item:border-gold/40 ${idx === 0 ? 'text-gold bg-gold/5' : 'text-espresso/40 bg-espresso/5'}`}>
                                             {card.symbol}
                                         </span>
-                                        <p className="text-espresso/70 text-[15px] leading-relaxed font-light">
+                                        <p className="text-espresso/70 text-[14px] leading-relaxed font-light">
                                             {item}
                                         </p>
                                     </li>
@@ -116,7 +116,7 @@ export default function ModernWhoThisIsFor() {
 
                 {/* Section 3 Quote - Integrated below the grid */}
                 <motion.div
-                    className="max-w-[1000px] mx-auto text-center"
+                    className="max-w-[1000px] mx-auto text-center mb-0"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

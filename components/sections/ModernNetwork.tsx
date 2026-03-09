@@ -11,7 +11,7 @@ export default function ModernNetwork() {
     ];
 
     return (
-        <section id="network" className="py-20 md:py-32 px-6 bg-stone-dark/10">
+        <section id="network" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-stone-dark/10">
             <div className="max-w-content mx-auto">
                 <div className="grid lg:grid-cols-2 gap-20 items-end mb-16">
                     <div>

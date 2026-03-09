@@ -28,7 +28,7 @@ export default function ModernOutcomes() {
     ];
 
     return (
-        <section id="outcomes" className="py-20 md:py-32 px-6 bg-stone-dark/20 relative overflow-hidden">
+        <section id="outcomes" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-stone-dark/20 relative overflow-hidden">
             <div className="max-w-content mx-auto">
                 <div className="text-center mb-24">
                     <motion.span
