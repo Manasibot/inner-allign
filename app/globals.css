@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Contemporary Light Elegance Tokens */
+  --color-stone: #F7F4F0;
+  --color-stone-dark: #EBE3D5;
+  --color-alabaster: #FCFAF9;
+  --color-espresso: #1A120B;
+  --color-espresso-muted: #3D342D;
+  --color-gold: #C5A059;
+  --color-gold-soft: rgba(197, 160, 89, 0.1);
+  --color-deep-purple: #2D1B36;
+  --color-glass: rgba(255, 255, 255, 0.4);
+  --color-glass-border: rgba(26, 18, 11, 0.06);
+
+  --font-outfit: 'Outfit', sans-serif;
+  --font-satoshi: 'Inter', sans-serif;
+  --font-canela: 'Playfair Display', serif;
+  --font-garamond: 'Cormorant Garamond', serif;
+
+  --ease-modern: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-stone);
+    color: var(--color-espresso);
+    font-family: var(--font-satoshi);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::selection {
+    background-color: var(--color-gold);
+    color: white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-outfit);
+    color: var(--color-espresso);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background-color: var(--color-glass);
+    border: 1px solid var(--color-glass-border);
+    backdrop-filter: blur(40px);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: all 0.5s var(--ease-modern);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+  }
+
+  .glass-card:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(197, 160, 89, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(26, 18, 11, 0.04);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-espresso) 0%, var(--color-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-gold {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-espresso);
+    color: var(--color-stone);
+    padding: 1.25rem 2.75rem;
+    border-radius: 0.5rem;
+    /* More architectural than pill */
+    font-family: var(--font-outfit);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.4s var(--ease-modern);
+  }
+
+  .btn-gold:hover {
+    background-color: var(--color-gold);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.25);
+  }
+
+  .section-label-elegant {
+    font-family: var(--font-outfit);
+    color: var(--color-gold);
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: block;
+  }
+
+  .headline-standard {
+    font-size: clamp(2.5rem, min(5.5vw, 7vh), 4.5rem);
+    font-family: var(--font-outfit);
+    font-weight: 600;
+    color: var(--color-espresso);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Three.js Canvas Styles */
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(212, 175, 55, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Lenis CSS */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
