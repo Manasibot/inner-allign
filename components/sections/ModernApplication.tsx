@@ -11,7 +11,7 @@ export default function ModernApplication() {
     ];
 
     return (
-        <section id="apply" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-stone-dark/30 relative">
+        <section id="apply" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-neutral-background3/20 relative">
             <div className="max-w-content mx-auto">
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                     <div>
@@ -34,7 +34,7 @@ export default function ModernApplication() {
                             <span className="text-gradient">Authority.</span>
                         </motion.h2>
                         <motion.p
-                            className="text-espresso/60 text-[18px] leading-relaxed mb-12 font-light"
+                            className="text-neutral-subheading text-[18px] leading-relaxed mb-12 font-normal"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
@@ -42,7 +42,7 @@ export default function ModernApplication() {
                             We do not accept applications based on status alone. We curate for psychological depth, group compatibility, and the willingness to engage in high-fidelity growth.
                         </motion.p>
 
-                        <button className="btn-gold group flex items-center gap-3">
+                        <button className="btn-primary group flex items-center gap-3">
                             Begin Admission Process
                             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </button>
@@ -52,18 +52,18 @@ export default function ModernApplication() {
                         {steps.map((step, idx) => (
                             <motion.div
                                 key={step.number}
-                                className="glass-card !p-8 !bg-white/60 border-espresso/5 flex items-center gap-8 group hover:!bg-white"
+                                className="glass-card !p-8 border-primary/5 flex items-center gap-8 group hover:!bg-white"
                                 initial={{ opacity: 0, x: 30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
                             >
-                                <span className="text-[32px] font-outfit font-bold text-gold/20 group-hover:text-gold transition-colors">
+                                <span className="text-[32px] font-outfit font-bold text-primary/10 group-hover:text-primary transition-colors">
                                     {step.number}
                                 </span>
                                 <div>
-                                    <h4 className="text-espresso font-semibold text-[18px] mb-1">{step.title}</h4>
-                                    <p className="text-espresso/40 text-[14px] uppercase tracking-widest font-bold">{step.desc}</p>
+                                    <h4 className="text-neutral-heading font-semibold text-[18px] mb-1">{step.title}</h4>
+                                    <p className="text-neutral-subheading/60 text-[14px] uppercase tracking-widest font-bold">{step.desc}</p>
                                 </div>
                             </motion.div>
                         ))}

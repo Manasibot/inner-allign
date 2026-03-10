@@ -76,9 +76,11 @@ export default function Hero() {
 
                     <div
                         ref={ruleRef}
-                        className="h-[1px] bg-gold mb-8"
-                        style={{ width: 0 }}
+                        className="h-[1px] bg-gold mb-13"
+                        style={{ width: '100%' }}
                     />
+
+
 
                     <p ref={bodyRef} className="text-body-lg text-stone max-w-[520px] mb-10">
                         This is not a program for women who are broken. This is a program for women who are already

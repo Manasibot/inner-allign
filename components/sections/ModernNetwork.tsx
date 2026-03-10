@@ -11,7 +11,7 @@ export default function ModernNetwork() {
     ];
 
     return (
-        <section id="network" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-stone-dark/10">
+        <section id="network" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-neutral-background3/30">
             <div className="max-w-content mx-auto">
                 <div className="grid lg:grid-cols-2 gap-20 items-end mb-16">
                     <div>
@@ -34,7 +34,7 @@ export default function ModernNetwork() {
                             <span className="text-gradient">Curated Network.</span>
                         </motion.h2>
                         <motion.p
-                            className="text-espresso/60 text-[18px] leading-relaxed mb-12 font-light"
+                            className="text-neutral-subheading text-[18px] leading-relaxed mb-12 font-normal"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
@@ -52,8 +52,8 @@ export default function ModernNetwork() {
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
                                 >
-                                    <span className="text-gold font-outfit font-bold text-[32px] block mb-2">{stat.value}</span>
-                                    <span className="text-espresso/40 text-[11px] uppercase tracking-widest font-bold font-outfit">{stat.label}</span>
+                                    <span className="text-secondary font-outfit font-bold text-[32px] block mb-2">{stat.value}</span>
+                                    <span className="text-neutral-subheading/40 text-[11px] uppercase tracking-widest font-bold font-outfit">{stat.label}</span>
                                 </motion.div>
                             ))}
                         </div>
@@ -61,13 +61,13 @@ export default function ModernNetwork() {
 
                     <div className="relative">
                         <motion.div
-                            className="glass-card !bg-white/80 border-espresso/5 !p-12 relative z-10"
+                            className="glass-card !bg-white/90 border-primary/5 !p-12 relative z-10"
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 1 }}
                         >
-                            <h4 className="text-espresso font-semibold text-[22px] mb-8 font-outfit">The Vetting Architecture</h4>
+                            <h4 className="text-neutral-heading font-semibold text-[22px] mb-8 font-outfit">The Vetting Architecture</h4>
                             <ul className="space-y-6">
                                 {[
                                     "Psychometric Compatibility Analysis",
@@ -75,17 +75,17 @@ export default function ModernNetwork() {
                                     "Non-Transactional Admission Policy",
                                     "Lifelong Digital Council Access"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-4 text-espresso/60 text-[15px]">
-                                        <div className="w-1.5 h-1.5 bg-gold rounded-full" />
+                                    <li key={i} className="flex items-center gap-4 text-neutral-subheading/70 text-[15px] font-normal">
+                                        <div className="w-1.5 h-1.5 bg-secondary rounded-full" />
                                         {item}
                                     </li>
                                 ))}
                             </ul>
-                            <button className="btn-gold w-full mt-10 !text-[12px]">View Alumni Network</button>
+                            <button className="btn-secondary w-full mt-10 !text-[12px]">View Alumni Network</button>
                         </motion.div>
 
                         {/* Background Geometric Decor */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-espresso/5 rounded-full pointer-events-none" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-primary/5 rounded-full pointer-events-none" />
                     </div>
                 </div>
             </div>

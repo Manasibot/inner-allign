@@ -60,6 +60,7 @@ export default function AlignmentCore({ scrollProgress = 0 }: { scrollProgress?:
                     opacity: sphereOpacity,
                 }}
             >
+                <div className="absolute w-[70%] h-[70%] rounded-full blur-3xl opacity-20 bg-gradient-to-r from-[#7B5CFF] via-[#C084FC] to-[#F472B6]" />
                 <motion.img
                     src="/tree_goddess.png"
                     alt="The Radiant Compass"
@@ -93,7 +94,8 @@ export default function AlignmentCore({ scrollProgress = 0 }: { scrollProgress?:
 
             {/* Subtle atmospheric glow to integrate the structure into the site theme */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute w-full h-full opacity-10 animate-pulse bg-[radial-gradient(circle_at_center,_rgba(197,160,89,0.15)_0%,_transparent_60%)]" />
+                <div className="absolute w-full h-full opacity-10 animate-pulse bg-[radial-gradient(circle_at_center,_rgba(123,92,255,0.18)
+_0%,_transparent_60%)]" />
             </div>
 
             {/* Soft architectural fades */}

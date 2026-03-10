@@ -41,7 +41,7 @@ export default function ModernJourney() {
     ];
 
     return (
-        <section id="journey" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-stone relative overflow-hidden">
+        <section id="journey" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-neutral-offwhite relative overflow-hidden">
             <div className="max-w-content mx-auto" ref={containerRef}>
                 <div className="grid lg:grid-cols-2 gap-20 items-end mb-16">
                     <div>
@@ -65,7 +65,7 @@ export default function ModernJourney() {
                         </motion.h2>
                     </div>
                     <motion.p
-                        className="text-espresso/60 text-[20px] leading-relaxed max-w-[500px] font-light"
+                        className="text-neutral-subheading text-[20px] leading-relaxed max-w-[500px] font-normal"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -82,13 +82,13 @@ export default function ModernJourney() {
                         <svg className="w-full h-full overflow-visible" preserveAspectRatio="none">
                             <line
                                 x1="50%" y1="0%" x2="50%" y2="100%"
-                                stroke="var(--color-espresso)"
+                                stroke="var(--color-primary)"
                                 strokeWidth="1"
                                 strokeOpacity="0.05"
                             />
                             <motion.line
                                 x1="50%" y1="0%" x2="50%" y2="100%"
-                                stroke="var(--color-gold)"
+                                stroke="var(--color-primary)"
                                 strokeWidth="2"
                                 style={{ pathLength }}
                             />
@@ -106,14 +106,14 @@ export default function ModernJourney() {
                                     viewport={{ once: true, margin: "-100px" }}
                                     transition={{ duration: 0.8, ease: "easeOut" }}
                                 >
-                                    <div className={`glass-card !bg-white/60 border-espresso/5 !p-8 md:!p-12 relative ${day.align === 'right' ? 'md:text-left' : 'text-left'}`}>
+                                    <div className={`glass-card border-primary/5 !p-8 md:!p-12 relative ${day.align === 'right' ? 'md:text-left' : 'text-left'}`}>
                                         <div className="flex items-center gap-4 mb-6">
-                                            <span className="text-gold font-outfit font-bold text-[27px] md:text-[35px] leading-none opacity-40 whitespace-nowrap">
+                                            <span className="text-primary font-outfit font-bold text-[27px] md:text-[35px] leading-none opacity-40 whitespace-nowrap">
                                                 Day {day.day}
                                             </span>
                                             <div className="flex flex-wrap gap-2">
                                                 {day.tags.map(tag => (
-                                                    <span key={tag} className="px-3 py-1 bg-gold/5 border border-gold/10 rounded-full text-gold font-bold text-[9px] md:text-[10px] uppercase tracking-wider">
+                                                    <span key={tag} className="px-3 py-1 bg-primary/5 border border-primary/10 rounded-full text-primary font-bold text-[9px] md:text-[10px] uppercase tracking-wider">
                                                         {tag === 'A' ? 'Awareness' :
                                                             tag === 'L' ? 'Leadership Intent' :
                                                                 tag === 'I' ? 'Impact' :
@@ -124,12 +124,12 @@ export default function ModernJourney() {
                                             </div>
                                         </div>
 
-                                        <h3 className="text-[24px] md:text-[28px] font-outfit font-semibold text-espresso mb-6 leading-tight">
+                                        <h3 className="text-[24px] md:text-[28px] font-outfit font-semibold text-neutral-heading mb-6 leading-tight">
                                             {day.title}
                                         </h3>
-                                        <div className="w-12 h-[2px] bg-gold/40 mb-6" />
+                                        <div className="w-12 h-[2px] bg-gradient-to-r from-primary to-secondary opacity-40 mb-6" />
 
-                                        <p className="text-espresso/60 text-[15px] md:text-[16px] leading-relaxed font-light">
+                                        <p className="text-neutral-subheading/70 text-[15px] md:text-[16px] leading-relaxed font-normal">
                                             {day.desc}
                                         </p>
                                     </div>
@@ -143,9 +143,9 @@ export default function ModernJourney() {
                                     viewport={{ once: true, margin: "-100px" }}
                                     transition={{ type: "spring", stiffness: 200, damping: 20 }}
                                 >
-                                    <div className="w-12 h-12 bg-stone border border-gold/30 rounded-full flex items-center justify-center shadow-sm relative group overflow-hidden">
-                                        <div className="absolute inset-0 bg-gold/5 transition-colors duration-500 group-hover:bg-gold/10" />
-                                        <span className="relative z-10 text-gold font-outfit font-bold text-[18px]">
+                                    <div className="w-12 h-12 bg-neutral-offwhite border border-primary/20 rounded-full flex items-center justify-center shadow-sm relative group overflow-hidden">
+                                        <div className="absolute inset-0 bg-primary/5 transition-colors duration-500 group-hover:bg-primary/10" />
+                                        <span className="relative z-10 text-primary font-outfit font-bold text-[18px]">
                                             {idx + 1}
                                         </span>
                                     </div>
@@ -165,11 +165,11 @@ export default function ModernJourney() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
                 >
-                    <div className="w-full h-[1px] bg-espresso/5 mb-12" />
+                    <div className="w-full h-[1px] bg-primary-light/20 mb-12" />
 
                     <a
                         href="#apply"
-                        className="text-[12px] uppercase tracking-[0.3em] font-bold text-espresso/30 hover:text-gold transition-colors duration-500 inline-flex items-center gap-2"
+                        className="text-[12px] uppercase tracking-[0.3em] font-bold text-neutral-subheading/40 hover:text-primary transition-colors duration-500 inline-flex items-center gap-2"
                     >
                         The full agenda is shared during the application process
                         <span className="text-[16px] leading-none">→</span>

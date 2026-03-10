@@ -46,7 +46,7 @@ export default function ModernUIWrapper({ children }: { children: React.ReactNod
     }, []);
 
     return (
-        <div className="relative min-h-screen bg-obsidian overflow-x-hidden">
+        <div className="relative min-h-screen bg-neutral-offwhite overflow-x-hidden">
             {/* Fixed 3D Layer */}
             <AlignmentCore scrollProgress={scrollProgress} />
 

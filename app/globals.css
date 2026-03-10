@@ -5,37 +5,37 @@
 @tailwind utilities;
 
 :root {
-  /* Contemporary Light Elegance Tokens */
-  --color-stone: #F7F4F0;
-  --color-stone-dark: #EBE3D5;
-  --color-alabaster: #FCFAF9;
-  --color-espresso: #1A120B;
-  --color-espresso-muted: #3D342D;
-  --color-gold: #C5A059;
-  --color-gold-soft: rgba(197, 160, 89, 0.1);
-  --color-deep-purple: #2D1B36;
-  --color-glass: rgba(255, 255, 255, 0.4);
-  --color-glass-border: rgba(26, 18, 11, 0.06);
+  /* Soft Feminine yet Powerful Palette */
+  --color-primary: #7B5CFF;
+  --color-primary-light: #E9D5FF;
+  --color-primary-dark: #5B21B6;
+  --color-secondary: #F472B6;
+  --color-secondary-light: #FBCFE8;
+  --color-secondary-dark: #EC4899;
+  --color-offwhite: #FAFAFF;
+  --color-heading: #2D2D2D;
+  --color-subheading: #5B5B6E;
+  --color-glass: rgba(255, 255, 255, 0.7);
+  --color-glass-border: #F3E8FF;
 
   --font-outfit: 'Outfit', sans-serif;
   --font-satoshi: 'Inter', sans-serif;
   --font-canela: 'Playfair Display', serif;
-  --font-garamond: 'Cormorant Garamond', serif;
 
   --ease-modern: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @layer base {
   body {
-    background-color: var(--color-stone);
-    color: var(--color-espresso);
+    background-color: var(--color-offwhite);
+    color: var(--color-subheading);
     font-family: var(--font-satoshi);
     -webkit-font-smoothing: antialiased;
   }
 
   body::selection {
-    background-color: var(--color-gold);
-    color: white;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
   }
 
   h1,
@@ -43,7 +43,7 @@
   h3,
   h4 {
     font-family: var(--font-outfit);
-    color: var(--color-espresso);
+    color: var(--color-heading);
     line-height: 1.1;
     letter-spacing: -0.01em;
   }
@@ -53,68 +53,114 @@
   .glass-card {
     background-color: var(--color-glass);
     border: 1px solid var(--color-glass-border);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(20px);
     border-radius: 1.5rem;
     padding: 2.5rem;
     transition: all 0.5s var(--ease-modern);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 10px 30px rgba(233, 213, 255, 0.2);
   }
 
   .glass-card:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-color: rgba(197, 160, 89, 0.2);
+    background-color: #FFFFFF;
+    border-color: var(--color-primary-light);
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(26, 18, 11, 0.04);
+    box-shadow: 0 20px 40px rgba(123, 92, 255, 0.1);
   }
 
-  .text-gradient {
-    background: linear-gradient(135deg, var(--color-espresso) 0%, var(--color-gold) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+.shine-text {
+  display: inline-block;
+  font-weight: 700;
 
-  .btn-gold {
+  background: linear-gradient(
+    120deg,
+    #8FCF9A 0%,
+    #6EE7B7 35%,
+    #ffffff 50%,
+    #6EE7B7 65%,
+    #8FCF9A 100%
+  );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  animation: letterShine 5s linear infinite;
+}
+
+@keyframes letterShine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+
+
+  .btn-primary {
     position: relative;
     overflow: hidden;
-    background-color: var(--color-espresso);
-    color: var(--color-stone);
-    padding: 1.25rem 2.75rem;
-    border-radius: 0.5rem;
-    /* More architectural than pill */
+    background: linear-gradient(135deg, #7B5CFF, #F472B6);
+    color: #FFFFFF;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
     font-family: var(--font-outfit);
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
     transition: all 0.4s var(--ease-modern);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .btn-gold:hover {
-    background-color: var(--color-gold);
-    color: white;
+  .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.25);
+    box-shadow: 0 10px 25px rgba(123, 92, 255, 0.3);
+    filter: brightness(1.1);
+  }
+
+  .btn-secondary {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    font-family: var(--font-outfit);
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.4s var(--ease-modern);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-secondary:hover {
+    background-color: #F3E8FF;
+    transform: translateY(-2px);
   }
 
   .section-label-elegant {
     font-family: var(--font-outfit);
-    color: var(--color-gold);
-    font-size: 10px;
-    letter-spacing: 0.4em;
+    color: var(--color-primary);
+    font-size: 12px;
+    letter-spacing: 0.2em;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     display: block;
+    opacity: 0.8;
   }
 
   .headline-standard {
-    font-size: clamp(2.5rem, min(5.5vw, 7vh), 4.5rem);
+    font-size: clamp(2.5rem, min(5.5vw, 7vh), 4rem);
     font-family: var(--font-outfit);
     font-weight: 600;
-    color: var(--color-espresso);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
+    color: var(--color-heading);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 }
 

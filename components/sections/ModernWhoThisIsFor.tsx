@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Leaf } from 'lucide-react';
 
 export default function ModernWhoThisIsFor() {
     const readiness = [
@@ -8,132 +9,138 @@ export default function ModernWhoThisIsFor() {
             title: "She Is Ready If She…",
             symbol: "✓",
             items: [
-                "Leads a team, a company, or a movement and wants to do it with more clarity and less noise",
-                "Has built a strong outer career but senses a misalignment between who she is publicly and who she is privately",
-                "Operates across cultures and geographies and wants to understand how her presence lands in different rooms",
-                "Has achieved significant milestones but struggles to articulate her own narrative with confidence",
-                "Is at an inflection point — a new role, a new chapter, a next level — and wants to arrive prepared",
-                "Has spent years growing others and is ready to invest in her own growth with the same rigour"
+                "Leads a team, company, or movement and wants clarity and alignment",
+                "Has strong external success but seeks inner alignment",
+                "Operates across cultures and wants presence to land effectively"
             ]
         },
         {
             title: "She Is Not Yet Ready If…",
             symbol: "–",
             items: [
-                "She is looking for surface-level confidence tips or presentation techniques",
-                "She is not willing to engage deeply with psychometric assessment and peer-level feedback",
-                "She expects to observe rather than participate fully",
-                "She is not open to examining the beliefs and patterns that have shaped her leadership so far",
-                "She wants quick fixes rather than a structural shift in how she leads and lives"
+                "Seeks surface-level tips rather than deep growth",
+                "Prefers observation over active engagement",
+                "Wants quick fixes instead of structural change"
             ]
         }
     ];
 
     return (
-        <section id="who" className="pt-20 md:pt-32 pb-16 md:pb-24 px-6 bg-stone relative overflow-hidden">
+        <section id="who" className="pt-7 md:pt-7 pb-16 md:pb-24 px-6 bg-neutral-background2 relative overflow-hidden">
             {/* Architectural Background Elements */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(var(--color-espresso) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+                style={{ backgroundImage: 'radial-gradient(var(--color-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] border border-espresso/5 rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] border border-gold/10 rounded-full translate-y-1/3 translate-x-1/4 pointer-events-none" />
+            <div className="w-[70%] mx-auto relative z-10">
+                <div className="text-center mb-6 mt-6">
+                    <motion.span
+                        className="section-label-elegant mb-3"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                    >
+                        The Selection
+                    </motion.span>
+                    <motion.h2
+                        className="headline-standard text-transparent bg-clip-text bg-gradient-to-r from-[#7B5CFF] to-[#F472B6]"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1 }}
+                    >
+                        Who is This <br />
+                        Experience For.
+                    </motion.h2>
 
-            <div className="absolute top-1/2 right-0 w-px h-64 bg-gradient-to-b from-transparent via-espresso/5 to-transparent pointer-events-none" />
-            <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/5 to-transparent pointer-events-none" />
-
-            <div className="max-w-content mx-auto relative z-10">
-                <div className="grid lg:grid-cols-2 gap-20 items-end mb-16">
-                    <div>
-                        <motion.span
-                            className="section-label-elegant"
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: true }}
-                        >
-                            The Selection
-                        </motion.span>
-                        <motion.h2
-                            className="headline-standard"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1 }}
-                        >
-                            Who This <br />
-                            <span className="text-gradient">Experience is For.</span>
-                        </motion.h2>
-                    </div>
                     <motion.p
-                        className="text-espresso/60 text-[20px] leading-relaxed max-w-[500px] font-light italic"
+                        className="italic leading-snug mt-6"
+                        style={{
+                            fontFamily: 'var(--font-canela)',
+                            fontSize: '20px',
+                            color: '#7B5CFF'
+                        }}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                     >
-                        Selection is the ultimate form of alignment. We bring together a high-calibre circle where the baseline is mastery and the objective is expansion.
+                        Selection is about alignment and growth—connecting leaders with clarity, confidence, and presence.
                     </motion.p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 mb-12">
-                    {readiness.map((card, idx) => (
-                        <motion.div
-                            key={card.title}
-                            className={`glass-card flex flex-col items-start !bg-white/40 !p-8 border-espresso/5 shadow-sm relative group overflow-hidden`}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
+                {/* Tree / Roots Layout */}
+                <div className="relative flex justify-center items-start gap-20 md:gap-32">
+                    {/* Trunk */}
+                    <div className="absolute top-0 left-1/2 w-[4px] h-full bg-gradient-to-b from-primary to-secondary -translate-x-1/2 pointer-events-none rounded" />
+
+                    {/* Left side nodes */}
+                    <div className="flex flex-col items-end gap-12 w-[50%]">
+                        {/* Left title */}
+                        <motion.h3
+                            className="text-[#7B5CFF] text-[22px] font-bold mb-6 text-right"
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.6 }}
                         >
-                            {/* Card Watermark - Increased visibility */}
-                            <div className="absolute top-10 right-10 text-[120px] font-outfit font-bold text-gold/[0.08] leading-none pointer-events-none group-hover:text-gold/[0.15] transition-all duration-700">
-                                0{idx + 1}
-                            </div>
+                            {readiness[0].title}
+                        </motion.h3>
 
-                            {/* Corner Marks */}
-                            <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-gold/20" />
-                            <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-gold/20" />
+                        {readiness[0].items.map((item, idx) => (
+                            <motion.div
+                                key={idx}
+                                className="flex items-center gap-3 relative z-10"
+                                initial={{ opacity: 0, x: 50, scale: 0.8 }}
+                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                                viewport={{ once: false }}
+                                transition={{ delay: idx * 0.2, duration: 0.6 }}
+                            >
+                                <div className="w-6 h-6 flex items-center justify-center text-white bg-[#7B5CFF] rounded-full">
+                                    <Leaf className="w-4 h-4" />
+                                </div>
 
-                            <h3 className="text-[24px] font-outfit font-semibold text-espresso mb-6 uppercase tracking-tight relative z-10">
-                                {card.title}
-                            </h3>
-                            <div className="w-12 h-[2px] bg-gold/40 mb-6 relative z-10" />
+                                <p className="text-[#7B5CFF] text-[18px] max-w-[220px] text-right">{item}</p>
 
-                            <ul className="space-y-6 relative z-10">
-                                {card.items.map((item, iIdx) => (
-                                    <li key={iIdx} className="flex gap-4 group/item">
-                                        <span className={`shrink-0 w-6 h-6 flex items-center justify-center rounded-sm border border-gold/10 text-[10px] font-bold transition-all duration-300 group-hover/item:border-gold/40 ${idx === 0 ? 'text-gold bg-gold/5' : 'text-espresso/40 bg-espresso/5'}`}>
-                                            {card.symbol}
-                                        </span>
-                                        <p className="text-espresso/70 text-[14px] leading-relaxed font-light">
-                                            {item}
-                                        </p>
-                                    </li>
-                                ))}
-                            </ul>
-                        </motion.div>
-                    ))}
+                                {/* Root connecting line */}
+                                <span className="absolute right-[-80px] top-2 w-[80px] h-[2px] bg-[#7B5CFF]/30 rounded-full" />
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* Right side nodes */}
+                    <div className="flex flex-col items-start gap-12 w-[50%]">
+                        {/* Right title */}
+                        <motion.h3
+                            className="text-[#F472B6] text-[22px] font-bold mb-6 text-left"
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            {readiness[1].title}
+                        </motion.h3>
+
+                        {readiness[1].items.map((item, idx) => (
+                            <motion.div
+                                key={idx}
+                                className="flex items-center gap-3 relative z-10"
+                                initial={{ opacity: 0, x: -50, scale: 0.8 }}
+                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                                viewport={{ once: false }}
+                                transition={{ delay: idx * 0.2, duration: 0.6 }}
+                            >
+                                {/* Root connecting line */}
+                                <span className="absolute left-[-80px] top-2 w-[80px] h-[2px] bg-[#F472B6]/30 rounded-full" />
+
+                                <p className="text-[#F472B6] text-[18px] max-w-[220px] text-left">{item}</p>
+
+                                <div className="w-6 h-6 flex items-center justify-center text-white bg-[#F472B6] rounded-full">
+                                    <Leaf className="w-4 h-4" />
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
-
-                {/* Section 3 Quote - Integrated below the grid */}
-                <motion.div
-                    className="max-w-[1000px] mx-auto text-center mb-0"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 1 }}
-                >
-                    <div className="w-full h-[1px] bg-espresso/5 mb-12" />
-                    <p
-                        className="italic leading-snug"
-                        style={{
-                            fontFamily: 'var(--font-garamond)',
-                            fontSize: '26px',
-                            color: 'var(--color-deep-purple)'
-                        }}
-                    >
-                        &ldquo;An intensive curated for the specific psychological density of elite women leaders. This is not for those seeking growth, but for those architecting expansion.&rdquo;
-                    </p>
-                </motion.div>
             </div>
         </section>
     );
