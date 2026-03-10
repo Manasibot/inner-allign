@@ -5,23 +5,27 @@ import { motion } from 'framer-motion';
 export default function ModernPhilosophy() {
     const pillars = [
         {
-            title: "Intelligent Foundations",
+            title: "Strong Roots Come First",
             paragraphs: [
-                "The most powerful trees in the world did not grow by accident. Beneath every towering oak, every ancient cedar, every fruit-bearing canopy — there is a root system as complex and intelligent as the tree itself.",
-                "It mapped its terrain before it grew. It survived storms by developing density, not rigidity. It feeds an entire ecosystem simply by becoming fully itself."
+                "The oldest trees did not grow fast. They grew deep.",
+                "Most high-achieving women have spent their careers building the visible parts — the title, the track record, the reputation. This experience turns the light downward. To the values and beliefs running underneath everything you have built, mostly without your awareness.",
+                "When you understand your roots, you stop managing your presence. You simply grow."
             ],
         },
         {
-            title: "Innate Influence",
+            title: "You Are Not Broken",
             paragraphs: [
-                "This experience is not about fixing what is missing. It is designed for women who are already accomplished — and who recognise that there is still more of their potential, clarity, and influence ready to be expressed.",
-                "More depth. More reach. More of themselves waiting to be expressed."
+                "This experience is not for women who are struggling. It is for women who are succeeding — and honest enough to notice that success and fulfilment are not always the same thing.",
+                "Somewhere in building your career, a version of you got left behind. The one who knew exactly what she believed and how she wanted to lead.",
+                "This is how you find her again."
             ],
         },
         {
-            title: "Inner Cartography",
+            title: "Three Days to Know Yourself Completely",
             paragraphs: [
-                "Over three transformational days, using the precision of The ALIGN Framework™ and the wisdom of the Ancient Forest, you will complete the most important cartography of your life."
+                "Most leaders operate from assumptions formed years ago — about how they come across, where their strengths are, and what others actually experience when they are in the room.",
+                "That gap between assumption and reality is where influence gets lost.",
+                "Over three days, you will build something rare: a complete, honest picture of who you are as a leader. Not someone else's version of you. Yours."
             ]
         }
     ];
@@ -110,7 +114,7 @@ export default function ModernPhilosophy() {
                             color: 'var(--color-deep-purple)'
                         }}
                     >
-                        &ldquo;A complete map of your inner architecture, your leadership ecosystem, and the legacy canopy you were designed to grow.&rdquo;
+                        &ldquo;A clear picture of where you are rooted, where you are growing, and how far your influence can reach.&rdquo;
                     </p>
                 </motion.div>
             </div>

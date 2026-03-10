@@ -54,7 +54,7 @@ export default function ModernHero() {
                     className="lg:col-span-7 flex flex-col gap-4 md:gap-8 justify-center"
                 >
                     <div>
-                        <span className="section-label-elegant mb-2 md:mb-4 block">AN ELITE LEADERSHIP EXPERIENCE FOR WOMEN</span>
+                        <span className="section-label-elegant mb-2 md:mb-4 block">A LEADERSHIP EXPERIENCE FOR WOMEN</span>
 
                         <h1 className="headline-standard max-w-[800px]">
                             The Inner Alignment Experience:<br />
@@ -69,7 +69,11 @@ export default function ModernHero() {
                             </p>
                             <div className="w-16 md:w-20 h-[1px] bg-gold mb-3 md:mb-5" />
                             <p className="text-espresso/60 text-[clamp(14px,min(0.9vw,1.5vh),16px)] leading-relaxed font-light">
-                                This experience is not about fixing what is missing. It is designed for women who are already accomplished — and who recognise that there is still more of their potential, clarity, and influence ready to be expressed.
+                                You are good at what you do. Possibly excellent. And still — there are moments when the gap between who you are in a room and who you know yourself to be feels wider than it should.
+                                <br />
+                                That gap has a name, It has a structure, And it can be closed, This is the work.
+                                <br />
+                                Not a workshop. Not a course. A complete map of your inner architecture — and a clear path forward.
                             </p>
                             <div className="w-full h-[1px] bg-espresso/5 mt-8 mb-4" />
                         </div>

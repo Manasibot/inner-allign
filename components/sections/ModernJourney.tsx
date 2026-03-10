@@ -35,7 +35,7 @@ export default function ModernJourney() {
             day: "03",
             title: "Owning Your Story, Growing Your Canopy",
             tags: ["N", "Integration"],
-            desc: "The harvest and the replanting. The roots are mapped, the trunk is strong. Now we grow the canopy: the visible, magnetic, distinctive expression of this woman's fully-integrated self.",
+            desc: "The roots are mapped. The foundation is solid. Day 3 is where it all becomes visible.\n\nYou will learn how to show up in the world as exactly who you are — clearly, consistently, and in a way that attracts the right people, rooms, and opportunities to you.",
             align: "left"
         }
     ];
@@ -71,8 +71,8 @@ export default function ModernJourney() {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
                     >
-                        Three Days, Five Pillars, <br />
-                        One Complete Cartography.
+                        Three Days. Five Pillars. <br />
+                        One Clear Path Forward.
                     </motion.p>
                 </div>
 

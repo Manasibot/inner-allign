@@ -1,57 +1,99 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function ModernAlignFramework() {
-    const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-
-    const pillars = [
+    const framework = [
         {
-            letter: 'A',
-            pillar: 'Awareness',
-            part: 'The Root System',
-            subtitle: 'Root Architecture',
-            desc: 'Identity, values, self-perception — mapped with scientific precision using EQ-i 2.0 and Hogan Assessments'
+            renew: {
+                letter: 'R',
+                phase: 'Rooting',
+                stage: 'Root Stage',
+                season: 'Winter Season',
+                note: 'Mapping the terrain before the first shoot appears.',
+                desc: 'The winter season of deep preparation — mapping the terrain before the first shoot appears.'
+            },
+            align: {
+                letter: 'A',
+                pillar: 'Awareness',
+                part: 'The Root System',
+                desc: 'Scientific mapping of your identity architecture before you grow.'
+            }
         },
         {
-            letter: 'L',
-            pillar: 'Leadership Intent',
-            part: 'The Stem',
-            subtitle: 'Growth Direction',
-            desc: 'The irreversible decision: which direction is up. Role, ambition, influence goals'
+            renew: {
+                letter: 'E',
+                phase: 'Emerging',
+                stage: 'Establish Stage',
+                season: 'Spring Shoot',
+                note: 'The first irreversible commitment to direction.',
+                desc: 'The spring shoot breaking ground — the first irreversible commitment to direction.'
+            },
+            align: {
+                letter: 'L',
+                pillar: 'Leadership Intent',
+                part: 'The Stem',
+                desc: 'Choosing which direction is up and channelling all energy toward it.'
+            }
         },
         {
-            letter: 'I',
-            pillar: 'Impact',
-            part: 'The Bud',
-            subtitle: 'First Visible Signal',
-            desc: 'How the world outside you reads the world inside you'
+            renew: {
+                letter: 'N',
+                phase: 'Nourishing',
+                stage: 'New Growth Stage',
+                season: 'Nourishing Phase',
+                note: 'Protection, precision, and the right conditions.',
+                desc: 'The tender sprout requiring protection, precision, and the right conditions to survive.'
+            },
+            align: {
+                letter: 'I',
+                pillar: 'Impact',
+                part: 'The Bud',
+                desc: 'The first visible signal of your renewed self entering the ecosystem.'
+            }
         },
         {
-            letter: 'G',
-            pillar: 'Gravitas',
-            part: 'The Trunk & Bark',
-            subtitle: 'Bark Intelligence',
-            desc: 'Somatic authority, cultural climate adaptability, executive presence'
+            renew: {
+                letter: 'E',
+                phase: 'Expanding',
+                stage: 'Endure Stage',
+                season: 'Hardening Wood',
+                note: 'Structural density to hold weight and survive storms.',
+                desc: 'The hardening of the wood — developing structural density to hold weight and survive storms.'
+            },
+            align: {
+                letter: 'G',
+                pillar: 'Gravitas',
+                part: 'The Trunk & Bark',
+                desc: 'Somatic authority, cultural intelligence, and unshakeable presence.'
+            }
         },
         {
-            letter: 'N',
-            pillar: 'Narrative',
-            part: 'The Canopy',
-            subtitle: 'The Canopy Economy',
-            desc: 'Personal brand, authentic visibility — the part that feeds others and attracts the world'
-        },
+            renew: {
+                letter: 'W',
+                phase: 'Witnessing',
+                stage: 'Wealth Stage',
+                season: 'Canopy Economy',
+                note: 'Production of fruit and attracting your ecosystem.',
+                desc: 'The production of fruit — the canopy economy where you feed others and attract your ecosystem.'
+            },
+            align: {
+                letter: 'N',
+                pillar: 'Narrative',
+                part: 'The Canopy',
+                desc: 'Personal brand, authentic visibility, and the story that draws the world to you.'
+            }
+        }
     ];
 
     return (
-        <section id="method" className="pt-20 md:pt-32 pb-16 md:pb-24 px-6 relative bg-alabaster/50 overflow-hidden">
+        <section id="method" className="pt-20 md:pt-32 pb-16 md:pb-24 px-6 relative bg-alabaster/50 overflow-hidden font-outfit">
             {/* Architectural Grid Underlay */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{ backgroundImage: 'radial-gradient(var(--color-espresso) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
             <div className="max-w-content mx-auto relative z-10">
-                <div className="grid lg:grid-cols-2 gap-20 items-end mb-16">
+                <div className="grid lg:grid-cols-2 gap-20 items-end mb-24">
                     <div>
                         <motion.span
                             className="section-label-elegant"
@@ -59,7 +101,7 @@ export default function ModernAlignFramework() {
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                         >
-                            The ALIGN Framework
+                            The Dual Framework
                         </motion.span>
                         <motion.h2
                             className="headline-standard"
@@ -68,115 +110,122 @@ export default function ModernAlignFramework() {
                             viewport={{ once: true }}
                             transition={{ duration: 1 }}
                         >
-                            The <span className="text-gradient">ALIGN</span> Framework™
+                            The <span className="text-gradient">ALIGN × R.E.N.E.W.</span> <br />
+                            Experience
                         </motion.h2>
                     </div>
                     <motion.p
-                        className="text-espresso/60 text-[20px] leading-relaxed max-w-[500px] font-light"
+                        className="text-espresso/60 text-[20px] leading-relaxed max-w-[500px] font-light italic"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                     >
-                        Success is not a sprint toward the finish line; it is a deepening of your structural integrity.
+                        Five biological phases of growth, mapped precisely to five pillars of executive leadership.
                     </motion.p>
                 </div>
 
-                {/* Desktop Grid / Mobile Scroll */}
-                <div className="flex overflow-x-auto md:grid md:grid-cols-5 gap-6 md:gap-4 pb-0 md:pb-0 scroll-smooth snap-x snap-mandatory no-scrollbar items-start mb-12">
-                    {pillars.map((p, idx) => (
-                        <motion.div
-                            key={p.pillar}
-                            className={`flex-shrink-0 w-[85vw] md:w-full snap-center glass-card !p-8 flex flex-col items-center text-center group bg-white/60 border-espresso/5 shadow-sm relative overflow-hidden transition-all duration-500 cursor-pointer ${expandedIndex === idx ? 'bg-white/90 border-gold/20 ring-1 ring-gold/10' : 'hover:bg-white/80'}`}
-                            onClick={() => setExpandedIndex(expandedIndex === idx ? null : idx)}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1, duration: 0.8 }}
-                        >
-                            {/* Standard Alphabet Style */}
-                            <span className={`text-[64px] font-outfit font-bold transition-all duration-500 block leading-none mb-6 ${expandedIndex === idx ? 'text-gold' : 'text-gold/30 group-hover:text-gold/60'}`}>
-                                {p.letter}
-                            </span>
+                {/* Architecture Matrix */}
+                <div className="space-y-12">
+                    {/* Header Row */}
+                    <div className="hidden md:grid md:grid-cols-[1fr_100px_1fr] gap-12 border-b border-espresso/10 pb-6">
+                        <div className="text-left font-bold text-[10px] uppercase tracking-[0.3em] text-gold/60">
+                            Internal Architecture (R.E.N.E.W.)
+                        </div>
+                        <div className="flex justify-center" />
+                        <div className="text-right font-bold text-[10px] uppercase tracking-[0.3em] text-gold/60">
+                            External Influence (ALIGN Framework™)
+                        </div>
+                    </div>
 
-                            {/* Corner Marks */}
-                            <div className={`absolute top-4 left-4 w-4 h-4 border-t border-l transition-colors duration-500 ${expandedIndex === idx ? 'border-gold/40' : 'border-gold/20'}`} />
-
-                            <div className="mb-6 relative z-10 w-full text-center">
-                                <h4 className={`font-bold text-[10px] uppercase tracking-[0.3em] mb-3 transition-colors duration-500 ${expandedIndex === idx ? 'text-gold' : 'text-gold/60'}`}>{p.pillar}</h4>
-                                <h3 className="text-espresso font-semibold text-[22px] leading-tight flex items-center justify-center">
-                                    {p.part}
-                                </h3>
+                    {framework.map((item, idx) => (
+                        <div key={idx} className="relative group/row">
+                            {/* Mobile Label */}
+                            <div className="md:hidden flex justify-between mb-4 border-b border-espresso/5 pb-2">
+                                <span className="text-[9px] uppercase tracking-widest text-gold/60 font-bold">Internal</span>
+                                <span className="text-[9px] uppercase tracking-widest text-gold/60 font-bold">External</span>
                             </div>
 
-                            <div className={`w-12 h-[2px] transition-all duration-500 mb-6 relative z-10 ${expandedIndex === idx ? 'bg-gold/40' : 'bg-gold/20'}`} />
-
-                            <AnimatePresence>
-                                {expandedIndex === idx && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: 'auto', opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.4, ease: "circOut" }}
-                                        className="relative z-10 overflow-hidden mb-6"
-                                    >
-                                        <p className="text-espresso font-bold text-[13px] uppercase tracking-wider mb-4 opacity-80">
-                                            {p.subtitle}
-                                        </p>
-                                        <p className="text-espresso/60 text-[15px] leading-relaxed font-light">
-                                            {p.desc}
-                                        </p>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-
-                            {/* Interaction Indicator - Static Arrow in Circle + Label */}
-                            <div className="mt-auto pt-6 border-t border-espresso/5 w-full flex flex-col items-center gap-3">
+                            <div className="grid md:grid-cols-[1fr_100px_1fr] gap-8 md:gap-12 items-stretch">
+                                {/* RENEW LANE (Left) */}
                                 <motion.div
-                                    animate={{ rotate: expandedIndex === idx ? 180 : 0 }}
-                                    transition={{ duration: 0.5, ease: "easeInOut" }}
-                                    className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-500 shadow-sm ${expandedIndex === idx ? 'border-gold bg-gold text-white shadow-gold/20' : 'border-gold/30 text-gold group-hover:border-gold/60 group-hover:bg-gold/5'}`}
+                                    className="text-left glass-card !bg-white/40 border-espresso/5 p-8 relative overflow-hidden group/lane-r transition-all duration-500 hover:!bg-white/70 hover:border-gold/20"
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: idx * 0.1, duration: 0.8 }}
+                                    whileHover={{ y: -5 }}
                                 >
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                                        <polyline points="6 9 12 15 18 9"></polyline>
-                                    </svg>
+                                    {/* Animated Background Accent */}
+                                    <div className="absolute top-0 right-0 w-24 h-24 bg-gold/[0.03] -mr-12 -mt-12 rounded-full blur-2xl group-hover/lane-r:bg-gold/5 transition-all duration-700" />
+
+                                    <div className="flex flex-col gap-1 mb-4 relative z-10">
+                                        <div className="flex items-center gap-3">
+                                            <span className="text-[32px] font-bold text-gold">{item.renew.letter}</span>
+                                            <h4 className="text-[18px] font-bold text-espresso uppercase tracking-tight">{item.renew.phase}</h4>
+                                        </div>
+                                        <p className="text-gold font-bold text-[10px] uppercase tracking-widest">{item.renew.stage}</p>
+                                    </div>
+                                    <p className="text-espresso/70 text-[14px] leading-relaxed font-light max-w-[400px] relative z-10">
+                                        {item.renew.desc}
+                                    </p>
                                 </motion.div>
 
-                                <AnimatePresence>
-                                    {expandedIndex !== idx && (
-                                        <motion.span
-                                            initial={{ opacity: 0, y: -5 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            exit={{ opacity: 0, y: -5 }}
-                                            className="text-[9px] uppercase tracking-[0.2em] text-gold/60 font-bold"
-                                        >
-                                            Click to Expand
-                                        </motion.span>
-                                    )}
-                                </AnimatePresence>
+                                {/* CONNECTOR (Middle) */}
+                                <div className="flex flex-col items-center justify-center relative h-12 md:h-auto py-4">
+                                    <div className="w-[1px] h-full bg-espresso/5 absolute hidden md:block" />
+                                    <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-alabaster z-10 text-gold text-[12px] font-bold group-hover/row:bg-gold group-hover/row:text-white group-hover/row:scale-110 transition-all duration-500 shadow-sm">
+                                        0{idx + 1}
+                                    </div>
+                                </div>
+
+                                {/* ALIGN LANE (Right) */}
+                                <motion.div
+                                    className="md:text-right flex flex-col items-start md:items-end glass-card !bg-white/40 border-espresso/5 p-8 relative overflow-hidden group/lane-a transition-all duration-500 hover:!bg-white/70 hover:border-gold/20"
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: idx * 0.1, duration: 0.8 }}
+                                    whileHover={{ y: -5 }}
+                                >
+                                    {/* Animated Background Accent */}
+                                    <div className="absolute top-0 left-0 w-24 h-24 bg-gold/[0.03] -ml-12 -mt-12 rounded-full blur-2xl group-hover/lane-a:bg-gold/5 transition-all duration-700" />
+
+                                    <div className="flex flex-col gap-1 mb-4 md:items-end relative z-10">
+                                        <div className="flex items-center gap-3 flex-row-reverse md:flex-row">
+                                            <h4 className="text-[18px] font-bold text-espresso uppercase tracking-tight">{item.align.pillar}</h4>
+                                            <span className="text-[32px] font-bold text-gold">{item.align.letter}</span>
+                                        </div>
+                                        <p className="text-gold font-bold text-[10px] uppercase tracking-widest">{item.align.part}</p>
+                                    </div>
+                                    <p className="text-espresso/70 text-[14px] leading-relaxed font-light max-w-[400px] md:text-right relative z-10">
+                                        {item.align.desc}
+                                    </p>
+                                </motion.div>
                             </div>
-                        </motion.div>
+
+                        </div>
                     ))}
                 </div>
 
-                {/* Transformational Quote - Integrated below the grid */}
+                {/* Transformational Quote */}
                 <motion.div
-                    className="max-w-[1000px] mx-auto text-center mt-4"
+                    className="max-w-[1000px] mx-auto text-center mt-20"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
                 >
-                    <div className="w-full h-[1px] bg-espresso/5 mb-6" />
+                    <div className="w-full h-[1px] bg-espresso/5 mb-8" />
                     <p
-                        className="italic leading-snug"
+                        className="italic leading-relaxed"
                         style={{
                             fontFamily: 'var(--font-garamond)',
                             fontSize: '26px',
                             color: 'var(--color-deep-purple)'
                         }}
                     >
-                        &ldquo;Five parts of the tree. Five pillars of your transformation. Each phase follows the same biological sequence that produces the world's most enduring trees.&rdquo;
+                        &ldquo;This is not just a framework. It is a biological mapping of your leadership ecosystem.&rdquo;
                     </p>
                 </motion.div>
             </div>

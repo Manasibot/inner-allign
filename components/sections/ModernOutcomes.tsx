@@ -8,7 +8,7 @@ export default function ModernOutcomes() {
         {
             icon: <Waypoints className="w-6 h-6" />,
             title: "A Complete Root Map",
-            desc: "The most precise, scientifically grounded understanding of your identity, values, derailers, and strengths — produced through EQ-i 2.0, HPI, HDS, and MVPI"
+            desc: "The clearest, most honest picture of yourself you have ever had. Who you are, what drives you, what holds you back, and where your real strengths live."
         },
         {
             icon: <Leaf className="w-6 h-6" />,
@@ -37,8 +37,8 @@ export default function ModernOutcomes() {
         },
         {
             icon: <Microscope className="w-6 h-6" />,
-            title: "Full Psychometric Intelligence Suite",
-            desc: "Personalised reports from EQ-i 2.0 Leadership, Hogan HPI, HDS, and MVPI"
+            title: "Your Personal Assessment Reports",
+            desc: "Every insight uncovered during the experience is documented and yours to keep. A complete set of personalised reports from every assessment used — yours to revisit."
         },
         {
             icon: <Compass className="w-6 h-6" />,

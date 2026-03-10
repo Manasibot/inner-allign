@@ -13,7 +13,7 @@ export default function ModernWhoThisIsFor() {
                 "Operates across cultures and geographies and wants to understand how her presence lands in different rooms",
                 "Has achieved significant milestones but struggles to articulate her own narrative with confidence",
                 "Is at an inflection point — a new role, a new chapter, a next level — and wants to arrive prepared",
-                "Has spent years growing others and is ready to invest in her own growth with the same rigour"
+                "Has spent years growing others and is ready to invest in her own re-growth (renewal) with the same rigour"
             ]
         },
         {
