@@ -5,12 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 
 export default function ModernFAQ() {
-    const [expandedIds, setExpandedIds] = useState<number[]>([]);
+    const [expandedId, setExpandedId] = useState<number | null>(null);
 
     const toggleFaq = (idx: number) => {
-        setExpandedIds(prev =>
-            prev.includes(idx) ? prev.filter(id => id !== idx) : [...prev, idx]
-        );
+        setExpandedId(prev => prev === idx ? null : idx);
     };
 
     const faqs = [
@@ -87,7 +85,7 @@ export default function ModernFAQ() {
                     {/* Left Column */}
                     <div className="space-y-6">
                         {leftColumn.map((faq, idx) => {
-                            const isExpanded = expandedIds.includes(idx);
+                            const isExpanded = expandedId === idx;
                             return (
                                 <motion.div
                                     key={idx}
@@ -134,7 +132,7 @@ export default function ModernFAQ() {
                     <div className="space-y-6">
                         {rightColumn.map((faq, idx) => {
                             const faqIdx = idx + 4;
-                            const isExpanded = expandedIds.includes(faqIdx);
+                            const isExpanded = expandedId === faqIdx;
                             return (
                                 <motion.div
                                     key={faqIdx}

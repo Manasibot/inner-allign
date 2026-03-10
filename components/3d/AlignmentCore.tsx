@@ -15,27 +15,6 @@ export default function AlignmentCore({ scrollProgress = 0 }: { scrollProgress?:
     // Spring-smoothed scroll for visual fluidity
     const smoothScroll = useSpring(scrollMV, { stiffness: 100, damping: 30 });
 
-    // Enhanced Parallax effect based on scroll progress
-    const yTransform = useTransform(
-        smoothScroll,
-        [0, 1],
-        ['0%', '-20%']
-    );
-
-    // Subtle blur on scroll
-    const blurAmount = useTransform(
-        smoothScroll,
-        [0, 1],
-        ['blur(0.5px)', 'blur(2px)']
-    );
-
-    // Subtle scale expansion on scroll
-    const zScale = useTransform(
-        smoothScroll,
-        [0, 1],
-        [1, 1.1]
-    );
-
     // Sphere opacity is still useful to keep it out of the Hero section
     const sphereOpacity = useTransform(
         smoothScroll,
