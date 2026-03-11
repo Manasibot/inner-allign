@@ -31,6 +31,7 @@
     color: var(--color-subheading);
     font-family: var(--font-satoshi);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   body::selection {
@@ -212,4 +213,38 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+/* Responsive Overlapping Sections (Stacking Cards Effect) */
+@media (min-width: 768px) {
+  main > * {
+    position: sticky !important;
+    top: 0 !important;
+    box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.05);
+    /* Prevents background of pseudo-element from leaking out of rounded corners if any */
+  }
+
+  /* Establish a natural stacking context order */
+  main > *:nth-child(1) { z-index: 1; }
+  main > *:nth-child(2) { z-index: 2; }
+  main > *:nth-child(3) { z-index: 3; }
+  main > *:nth-child(4) { z-index: 4; }
+  main > *:nth-child(5) { z-index: 5; }
+  main > *:nth-child(6) { z-index: 6; }
+  main > *:nth-child(7) { z-index: 7; }
+  main > *:nth-child(8) { z-index: 8; }
+  main > *:nth-child(9) { z-index: 9; }
+  main > *:nth-child(10) { z-index: 10; }
+  main > *:nth-child(11) { z-index: 11; }
+  main > *:nth-child(12) { z-index: 12; }
+
+  /* Ensure all sections have a solid background color to prevent under-layers showing through */
+  main > *::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-offwhite);
+    z-index: -100;
+    pointer-events: none;
+  }
 }

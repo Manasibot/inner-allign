@@ -83,10 +83,12 @@ export default function ThreeDayJourney() {
 
     return (
         <section
+            id="journey"
             ref={sectionRef}
-            className="bg-warm-white py-[100px] md:py-[140px]"
+            className="bg-gradient-to-br from-[#7B5CFF] to-[#F472B6] py-[100px] md:py-[140px]"
             aria-label="The three-day journey"
         >
+
             <div className="max-w-content mx-auto px-6 md:px-12">
                 <span className="section-label block mb-4 text-center">THE JOURNEY</span>
                 <h2 className="text-h1 text-deep-purple text-center mb-4">

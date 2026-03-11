@@ -8,44 +8,44 @@ export default function ModernAlignFramework() {
 
     const pillars = [
         {
-            letter: 'A',
-            pillar: 'Awareness',
+            letter: 'R',
+            // pillar: 'Awareness',
             part: 'The Root System',
-            subtitle: 'Root Architecture',
+            subtitle: 'Rooting in Awareness',
             video: '/roots.mp4',
-            desc: 'This is where you map your DNA before you grow. '
+            desc: 'A deep understanding & scientific mapping of your identity architecture before you grow.'
         },
         {
-            letter: 'L',
-            pillar: 'Leadership Intent',
+            letter: 'E',
+            // pillar: 'Leadership Intent',
             part: 'The Stem',
-            subtitle: 'Growth Direction',
+            subtitle: 'Emerging in Leadership Intent',
             video: '/stem.mp4',
-            desc: 'You must choose a direction (Up) to channel your energy.'
-        },
-        {
-            letter: 'I',
-            pillar: 'Impact',
-            part: 'The Bud',
-            subtitle: 'First Visible Signal',
-            video: '/bud.mp4',
-            desc: 'The first visible sign of your new self entering the world.'
-        },
-        {
-            letter: 'G',
-            pillar: 'Gravitas',
-            part: 'The Trunk & Bark',
-            subtitle: 'Bark Intelligence',
-            video: '/trunk.mp4',
-            desc: ' Developing the thickness (Lignin) to hold weight and survive storms.'
+            desc: 'Establishing & choosing to commit to an upward direction.'
         },
         {
             letter: 'N',
-            pillar: 'Narrative',
+            // pillar: 'Impact',
+            part: 'The Bud',
+            subtitle: 'Nourishing for Impact',
+            video: '/bud.mp4',
+            desc: 'The first visible shoots of the new self emerging.'
+        },
+        {
+            letter: 'E',
+            // pillar: 'Gravitas',
+            part: 'The Trunk & Bark',
+            subtitle: 'Expanding Your Gravitas',
+            video: '/trunk.mp4',
+            desc: 'Forming internal structural density to hold weight, survive storms and developing unshakeable presence.'
+        },
+        {
+            letter: 'W',
+            // pillar: 'Narrative',
             part: 'The Canopy',
-            subtitle: 'The Canopy Economy',
+            subtitle: 'Witnessing the Narrative',
             video: '/canopy.mp4',
-            desc: ' The part that feeds others and attracts the world to you.'
+            desc: 'The Wealth Stage where you attract your ecosystem, through a story that draws the world to you.'
         },
     ];
 
@@ -58,7 +58,7 @@ export default function ModernAlignFramework() {
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{ backgroundImage: 'radial-gradient(var(--color-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
-            <div className="max-w-content mx-auto relative z-10">
+            <div className="max-w-full mx-auto relative z-10">
 
                 <div className="grid lg:grid-cols-2 gap-20 items-end mb-10">
                     <div>
@@ -75,7 +75,7 @@ export default function ModernAlignFramework() {
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.2, duration: 0.6 }}
                             >
-                                The
+                                The Dual Framework -
                             </motion.span>
 
                             {/* Animate 'ALIGN' with gradient */}
@@ -85,7 +85,7 @@ export default function ModernAlignFramework() {
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 transition={{ delay: 0.4, duration: 0.6, type: 'spring', stiffness: 120 }}
                             >
-                                ALIGN
+                                The ALIGN × R.E.N.E.W.
                             </motion.span>
 
                             {/* Animate 'Framework' */}
@@ -94,24 +94,23 @@ export default function ModernAlignFramework() {
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.6, duration: 0.6 }}
                             >
-                                Framework
+                                Experience
                             </motion.span>
                         </motion.h2>
-                           <div className="w-50 h-[2px] bg-gradient-to-r from-[#7B5CFF] to-[#F472B6] mb-5 mt-5" />
+                        <div className="w-50 h-[2px] bg-gradient-to-r from-[#7B5CFF] to-[#F472B6] mb-5 mt-5" />
                     </div>
-                     {/* <div className="w-50 h-[2px] bg-gradient-to-r from-[#7B5CFF] to-[#8FCF9A] mb-5" /> */}
+                    {/* <div className="w-50 h-[2px] bg-gradient-to-r from-[#7B5CFF] to-[#8FCF9A] mb-5" /> */}
 
 
                     {/* <motion.p
                         className="text-[20px] leading-relaxed max-w-[500px]"
-                        style={{ color: '#7B5CFF' }}
+                        style={{ color: '#7aa65c' }}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                     >
-                        Success is not a sprint toward the finish line; it is a deepening of your structural integrity.
-                    </motion.p> */}
+                        Your internal biological architecture (R.E.N.E.W.) leading to your external leadership influence (ALIGN Framework) </motion.p> */}
 
                 </div>
 
@@ -123,19 +122,19 @@ export default function ModernAlignFramework() {
                     {pillars.map((p, idx) => (
 
                         <motion.div
-      key={p.pillar}
-      className={`flex-shrink-0 w-[85vw] md:w-full snap-center glass-card flex flex-col items-center text-center group border-primary/5 shadow-sm relative overflow-hidden transition-all duration-500 cursor-pointer
+                            key={p.pillar}
+                            className={`flex-shrink-0 w-[85vw] md:w-full snap-center glass-card flex flex-col items-center text-center group border-primary/5 shadow-sm relative overflow-hidden transition-all duration-500 cursor-pointer
         min-h-[120px] 
         ${expandedIndex === idx
-          ? 'bg-white/90 border-primary/20 ring-1 ring-primary/10 h-auto'
-          : 'hover:bg-white/80'
-        }`}
-      onClick={() => setExpandedIndex(expandedIndex === idx ? null : idx)}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: idx * 0.1, duration: 0.8 }}
-    >
+                                    ? 'bg-white/90 border-primary/20 ring-1 ring-primary/10 h-auto'
+                                    : 'hover:bg-white/80'
+                                }`}
+                            onClick={() => setExpandedIndex(expandedIndex === idx ? null : idx)}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.1, duration: 0.8 }}
+                        >
 
                             {/* VIDEO BACKGROUND (ONLY WHEN COLLAPSED) */}
 
@@ -276,8 +275,8 @@ export default function ModernAlignFramework() {
                             color: 'var(--color-primary-dark)'
                         }}
                     >
-                        “Five parts of the tree. Five pillars of your transformation. Each phase follows the same biological sequence that produces the world's most enduring trees.”
-                    </p>
+
+                        “This is not just a framework. It is a biological mapping of your leadership ecosystem.”                    </p>
 
                 </motion.div>
 

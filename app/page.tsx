@@ -21,8 +21,9 @@ export default function Home() {
         <ModernHero />
         <ModernPhilosophy />
         <ModernWhoThisIsFor />
+         <ModernJourney />
         <ModernAlignFramework />
-        <ModernJourney />
+       
         <ModernNetwork />
         <ModernOutcomes />
         <ModernApplication />

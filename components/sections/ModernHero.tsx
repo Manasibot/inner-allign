@@ -129,9 +129,11 @@ export default function ModernHero() {
                             </p>
 
                             <p className="text-white/80 text-[16px] leading-relaxed">
-                                This is not a program for women who are broken. This is a program for women who are already powerful — and who sense, with absolute clarity, that there is more.
+                                You are good at what you do. Possibly excellent. And still — there are moments when the gap between who you are in a room and who you know yourself to be feels wider than it should. That gap has a name, it has a structure, and it can be closed. This is the work.
                             </p>
-
+                                <p className="text-white text-[20px] leading-snug font-semibold mb-3">
+                                    Not a workshop. Not a course. A complete map of your inner architecture — and a clear path forward.</p>
+                                
                         </div>
 
 
@@ -188,7 +190,7 @@ export default function ModernHero() {
                     <div>
 
                         <span className="text-[#8FCF9A] font-bold text-[26px] block">
-                            May ‘25
+                            May ‘26
                         </span>
 
                         <span className="text-white/70 text-[10px] uppercase tracking-widest font-bold mt-2 block">
@@ -214,7 +216,7 @@ export default function ModernHero() {
 
                    <div className="relative w-50 flex justify-end">
                     <div className="absolute -rotate-11.25 right-4 -top-7 bg-gradient-to-r from-[#7B5CFF]/80 to-[#F472B6]/80 px-6 py-2 shadow-lg">
-                        <p className="text-white/90 text-[11px] leading-relaxed uppercase tracking-widest font-bold whitespace-nowrap">
+                     <p className="text-white/90 text-[11px] leading-relaxed uppercase tracking-widest font-bold whitespace-nowrap">
                             Curated for transformational insight among a high-calibre circle of women leaders.
                         </p>
                     </div>

@@ -60,7 +60,7 @@ export default function WhoThisIsFor() {
     return (
         <section
             ref={sectionRef}
-            className="bg-warm-white py-[100px] md:py-[140px]"
+            className="bg-warm-white py-[100px] md:py-[170px]"
             aria-label="Who this experience is for"
         >
             <div className="max-w-content mx-auto px-6 md:px-12">
