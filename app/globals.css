@@ -5,17 +5,19 @@
 @tailwind utilities;
 
 :root {
-  /* Contemporary Light Elegance Tokens */
-  --color-stone: #F7F4F0;
-  --color-stone-dark: #EBE3D5;
-  --color-alabaster: #FCFAF9;
-  --color-espresso: #1A120B;
-  --color-espresso-muted: #3D342D;
-  --color-gold: #C5A059;
-  --color-gold-soft: rgba(197, 160, 89, 0.1);
-  --color-deep-purple: #2D1B36;
-  --color-glass: rgba(255, 255, 255, 0.4);
-  --color-glass-border: rgba(26, 18, 11, 0.06);
+  /* Botanical Blush (Beauty & Lifestyle + Eco) */
+  --color-petal: #FDF9F8;
+  --color-petal-dark: #F5EFED;
+  --color-blush: #FCEEEE;
+  --color-blush-silk: #F9E4E4;
+  --color-plum: #2D1B36;
+  --color-plum-muted: #4A3B4E;
+  --color-rose-gold: #D4A373;
+  --color-rose-gold-soft: rgba(212, 163, 115, 0.1);
+  --color-sage: #6B705C;
+  --color-sage-light: #A5A58D;
+  --color-glass: rgba(255, 255, 255, 0.5);
+  --color-glass-border: rgba(102, 60, 56, 0.05);
 
   --font-outfit: 'Outfit', sans-serif;
   --font-satoshi: 'Inter', sans-serif;
@@ -27,14 +29,14 @@
 
 @layer base {
   body {
-    background-color: var(--color-stone);
-    color: var(--color-espresso);
+    background-color: var(--color-petal);
+    color: var(--color-plum);
     font-family: var(--font-satoshi);
     -webkit-font-smoothing: antialiased;
   }
 
   body::selection {
-    background-color: var(--color-gold);
+    background-color: var(--color-rose-gold);
     color: white;
   }
 
@@ -42,8 +44,8 @@
   h2,
   h3,
   h4 {
-    font-family: var(--font-outfit);
-    color: var(--color-espresso);
+    font-family: var(--font-garamond); /* Elegant serif for headings */
+    color: var(--color-plum);
     line-height: 1.1;
     letter-spacing: -0.01em;
   }
@@ -54,34 +56,33 @@
     background-color: var(--color-glass);
     border: 1px solid var(--color-glass-border);
     backdrop-filter: blur(40px);
-    border-radius: 1.5rem;
+    border-radius: 2rem; /* Softer, rounder corners */
     padding: 2.5rem;
     transition: all 0.5s var(--ease-modern);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 30px rgba(102, 60, 56, 0.02);
   }
 
   .glass-card:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-color: rgba(197, 160, 89, 0.2);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-color: rgba(212, 163, 115, 0.2);
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(26, 18, 11, 0.04);
+    box-shadow: 0 20px 40px rgba(102, 60, 56, 0.04);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, var(--color-espresso) 0%, var(--color-gold) 100%);
+    background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-rose-gold) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .btn-gold {
+  .btn-gold, .btn-rose {
     position: relative;
     overflow: hidden;
-    background-color: var(--color-espresso);
-    color: var(--color-stone);
-    padding: 1.25rem 2.75rem;
-    border-radius: 0.5rem;
-    /* More architectural than pill */
+    background-color: var(--color-plum);
+    color: var(--color-petal);
+    padding: 1.15rem 2.85rem;
+    border-radius: 9999px; /* Pill shape for softer feel */
     font-family: var(--font-outfit);
     font-weight: 500;
     font-size: 14px;
@@ -90,16 +91,16 @@
     transition: all 0.4s var(--ease-modern);
   }
 
-  .btn-gold:hover {
-    background-color: var(--color-gold);
+  .btn-gold:hover, .btn-rose:hover {
+    background-color: var(--color-rose-gold);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.25);
+    box-shadow: 0 10px 30px rgba(212, 163, 115, 0.25);
   }
 
   .section-label-elegant {
     font-family: var(--font-outfit);
-    color: var(--color-gold);
+    color: var(--color-rose-gold);
     font-size: 10px;
     letter-spacing: 0.4em;
     font-weight: 600;
@@ -110,9 +111,9 @@
 
   .headline-standard {
     font-size: clamp(2.5rem, min(5.5vw, 7vh), 4.5rem);
-    font-family: var(--font-outfit);
-    font-weight: 600;
-    color: var(--color-espresso);
+    font-family: var(--font-garamond);
+    font-weight: 500;
+    color: var(--color-plum);
     line-height: 1.05;
     letter-spacing: -0.01em;
   }
@@ -135,16 +136,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--color-navy);
+  background-color: var(--color-petal);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(212, 175, 55, 0.2);
+  background-color: rgba(212, 163, 115, 0.2);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(212, 175, 55, 0.4);
+  background-color: rgba(212, 163, 115, 0.4);
 }
 
 /* Lenis CSS */

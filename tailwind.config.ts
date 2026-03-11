@@ -9,36 +9,38 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Contemporary Light Elegance Tokens
-        stone: {
-          DEFAULT: "#F7F4F0", // Warm architectural stone
-          dark: "#EBE3D5",
-          border: "rgba(26, 18, 11, 0.08)",
+        // Botanical Blush (Beauty & Lifestyle + Eco)
+        petal: {
+          DEFAULT: "#FDF9F8", // Soft off-white blush
+          dark: "#F5EFED",
+          border: "rgba(102, 60, 56, 0.08)",
         },
-        alabaster: {
-          DEFAULT: "#FCFAF9", // High-end white
+        blush: {
+          DEFAULT: "#FCEEEE", // Delicate silk blush
+          silk: "#F9E4E4",
         },
-        espresso: {
-          DEFAULT: "#1A120B", // Sophisticated dark text
-          muted: "#3D342D",
+        plum: {
+          DEFAULT: "#2D1B36", // Deep sophisticated plum for text
+          muted: "#4A3B4E",
         },
-        gold: {
-          DEFAULT: "#C5A059", // Antique gold
-          muted: "#A68A4A",
-          soft: "rgba(197, 160, 89, 0.1)",
+        rose: {
+          gold: "#D4A373", // Warm rose gold
+          soft: "rgba(212, 163, 115, 0.1)",
         },
-        eucalyptus: {
-          DEFAULT: "#4A5D4E", // Botanical secondary accent
+        sage: {
+          DEFAULT: "#6B705C", // Muted botanical green (Eco touch)
+          light: "#A5A58D",
         },
       },
       fontFamily: {
         outfit: ["var(--font-outfit)", "sans-serif"],
         satoshi: ["var(--font-satoshi)", "sans-serif"],
         canela: ["var(--font-canela)", "serif"],
+        garamond: ["var(--font-garamond)", "serif"],
       },
       backgroundImage: {
-        "glass-gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%)",
-        "gold-spotlight": "radial-gradient(50% 50% at 50% 50%, rgba(212, 175, 55, 0.08) 0%, rgba(10, 17, 40, 0) 100%)",
+        "glass-gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)",
+        "blush-spotlight": "radial-gradient(50% 50% at 50% 50%, rgba(252, 238, 238, 0.1) 0%, rgba(253, 249, 248, 0) 100%)",
       },
       maxWidth: {
         content: "1280px",
@@ -46,16 +48,16 @@ const config: Config = {
       },
       animation: {
         "float-slow": "float 8s ease-in-out infinite",
-        "pulse-gold": "pulse-gold 4s ease-in-out infinite",
+        "pulse-rose": "pulse-rose 4s ease-in-out infinite",
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-20px)" },
+          "50%": { transform: "translateY(-15px)" },
         },
-        "pulse-gold": {
+        "pulse-rose": {
           "0%, 100%": { opacity: "0.3", transform: "scale(1)" },
-          "50%": { opacity: "0.6", transform: "scale(1.05)" },
+          "50%": { opacity: "0.6", transform: "scale(1.03)" },
         },
       },
     },

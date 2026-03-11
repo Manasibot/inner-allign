@@ -87,10 +87,10 @@ export default function ModernAlignFramework() {
     ];
 
     return (
-        <section id="method" className="pt-20 md:pt-32 pb-16 md:pb-24 px-6 relative bg-alabaster/50 overflow-hidden font-outfit">
+        <section id="method" className="pt-20 md:pt-32 pb-16 md:pb-24 px-6 relative bg-blush/20 overflow-hidden font-outfit">
             {/* Architectural Grid Underlay */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(var(--color-espresso) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
+                style={{ backgroundImage: 'radial-gradient(var(--color-plum) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
             <div className="max-w-content mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-20 items-end mb-24">
@@ -115,7 +115,7 @@ export default function ModernAlignFramework() {
                         </motion.h2>
                     </div>
                     <motion.p
-                        className="text-espresso/60 text-[20px] leading-relaxed max-w-[500px] font-light italic"
+                        className="text-plum/60 text-[20px] leading-relaxed max-w-[500px] font-light italic"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -128,12 +128,12 @@ export default function ModernAlignFramework() {
                 {/* Architecture Matrix */}
                 <div className="space-y-12">
                     {/* Header Row */}
-                    <div className="hidden md:grid md:grid-cols-[1fr_100px_1fr] gap-12 border-b border-espresso/10 pb-6">
-                        <div className="text-left font-bold text-[10px] uppercase tracking-[0.3em] text-gold/60">
+                    <div className="hidden md:grid md:grid-cols-[1fr_100px_1fr] gap-12 border-b border-plum/10 pb-6">
+                        <div className="text-left font-bold text-[10px] uppercase tracking-[0.3em] text-rose-gold/60">
                             Internal Architecture (R.E.N.E.W.)
                         </div>
                         <div className="flex justify-center" />
-                        <div className="text-right font-bold text-[10px] uppercase tracking-[0.3em] text-gold/60">
+                        <div className="text-right font-bold text-[10px] uppercase tracking-[0.3em] text-rose-gold/60">
                             External Influence (ALIGN Framework™)
                         </div>
                     </div>
@@ -141,15 +141,15 @@ export default function ModernAlignFramework() {
                     {framework.map((item, idx) => (
                         <div key={idx} className="relative group/row">
                             {/* Mobile Label */}
-                            <div className="md:hidden flex justify-between mb-4 border-b border-espresso/5 pb-2">
-                                <span className="text-[9px] uppercase tracking-widest text-gold/60 font-bold">Internal</span>
-                                <span className="text-[9px] uppercase tracking-widest text-gold/60 font-bold">External</span>
+                            <div className="md:hidden flex justify-between mb-4 border-b border-plum/5 pb-2">
+                                <span className="text-[9px] uppercase tracking-widest text-rose-gold/60 font-bold">Internal</span>
+                                <span className="text-[9px] uppercase tracking-widest text-rose-gold/60 font-bold">External</span>
                             </div>
 
                             <div className="grid md:grid-cols-[1fr_100px_1fr] gap-8 md:gap-12 items-stretch">
                                 {/* RENEW LANE (Left) */}
                                 <motion.div
-                                    className="text-left glass-card !bg-white/40 border-espresso/5 p-8 relative overflow-hidden group/lane-r transition-all duration-500 hover:!bg-white/70 hover:border-gold/20"
+                                    className="text-left glass-card !bg-white/60 border-plum/5 p-8 relative overflow-hidden group/lane-r transition-all duration-500 hover:!bg-white/90 hover:border-rose-gold/20"
                                     initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
@@ -157,31 +157,31 @@ export default function ModernAlignFramework() {
                                     whileHover={{ y: -5 }}
                                 >
                                     {/* Animated Background Accent */}
-                                    <div className="absolute top-0 right-0 w-24 h-24 bg-gold/[0.03] -mr-12 -mt-12 rounded-full blur-2xl group-hover/lane-r:bg-gold/5 transition-all duration-700" />
+                                    <div className="absolute top-0 right-0 w-24 h-24 bg-rose-gold/[0.03] -mr-12 -mt-12 rounded-full blur-2xl group-hover/lane-r:bg-rose-gold/5 transition-all duration-700" />
 
                                     <div className="flex flex-col gap-1 mb-4 relative z-10">
-                                        <div className="flex items-center gap-3">
-                                            <span className="text-[32px] font-bold text-gold">{item.renew.letter}</span>
-                                            <h4 className="text-[18px] font-bold text-espresso uppercase tracking-tight">{item.renew.phase}</h4>
+                                        <div className="flex items-center gap-4">
+                                            <span className="text-[36px] font-garamond font-bold text-rose-gold">{item.renew.letter}</span>
+                                            <h4 className="text-[18px] font-garamond font-semibold text-plum uppercase tracking-tight">{item.renew.phase}</h4>
                                         </div>
-                                        <p className="text-gold font-bold text-[10px] uppercase tracking-widest">{item.renew.stage}</p>
+                                        <p className="text-sage font-bold text-[10px] uppercase tracking-widest">{item.renew.stage}</p>
                                     </div>
-                                    <p className="text-espresso/70 text-[14px] leading-relaxed font-light max-w-[400px] relative z-10">
+                                    <p className="text-plum/70 text-[14px] leading-relaxed font-light max-w-[400px] relative z-10">
                                         {item.renew.desc}
                                     </p>
                                 </motion.div>
 
                                 {/* CONNECTOR (Middle) */}
                                 <div className="flex flex-col items-center justify-center relative h-12 md:h-auto py-4">
-                                    <div className="w-[1px] h-full bg-espresso/5 absolute hidden md:block" />
-                                    <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-alabaster z-10 text-gold text-[12px] font-bold group-hover/row:bg-gold group-hover/row:text-white group-hover/row:scale-110 transition-all duration-500 shadow-sm">
+                                    <div className="w-[1px] h-full bg-plum/5 absolute hidden md:block" />
+                                    <div className="w-10 h-10 rounded-full border border-rose-gold/40 flex items-center justify-center bg-petal z-10 text-rose-gold text-[12px] font-bold group-hover/row:bg-rose-gold group-hover/row:text-white group-hover/row:scale-110 transition-all duration-500 shadow-sm">
                                         0{idx + 1}
                                     </div>
                                 </div>
 
                                 {/* ALIGN LANE (Right) */}
                                 <motion.div
-                                    className="md:text-right flex flex-col items-start md:items-end glass-card !bg-white/40 border-espresso/5 p-8 relative overflow-hidden group/lane-a transition-all duration-500 hover:!bg-white/70 hover:border-gold/20"
+                                    className="md:text-right flex flex-col items-start md:items-end glass-card !bg-white/60 border-plum/5 p-8 relative overflow-hidden group/lane-a transition-all duration-500 hover:!bg-white/90 hover:border-rose-gold/20"
                                     initial={{ opacity: 0, x: 20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
@@ -189,16 +189,16 @@ export default function ModernAlignFramework() {
                                     whileHover={{ y: -5 }}
                                 >
                                     {/* Animated Background Accent */}
-                                    <div className="absolute top-0 left-0 w-24 h-24 bg-gold/[0.03] -ml-12 -mt-12 rounded-full blur-2xl group-hover/lane-a:bg-gold/5 transition-all duration-700" />
+                                    <div className="absolute top-0 left-0 w-24 h-24 bg-rose-gold/[0.03] -ml-12 -mt-12 rounded-full blur-2xl group-hover/lane-a:bg-rose-gold/5 transition-all duration-700" />
 
                                     <div className="flex flex-col gap-1 mb-4 md:items-end relative z-10">
-                                        <div className="flex items-center gap-3 flex-row-reverse md:flex-row">
-                                            <h4 className="text-[18px] font-bold text-espresso uppercase tracking-tight">{item.align.pillar}</h4>
-                                            <span className="text-[32px] font-bold text-gold">{item.align.letter}</span>
+                                        <div className="flex items-center gap-4 flex-row-reverse md:flex-row">
+                                            <h4 className="text-[18px] font-garamond font-semibold text-plum uppercase tracking-tight">{item.align.pillar}</h4>
+                                            <span className="text-[36px] font-garamond font-bold text-rose-gold">{item.align.letter}</span>
                                         </div>
-                                        <p className="text-gold font-bold text-[10px] uppercase tracking-widest">{item.align.part}</p>
+                                        <p className="text-sage font-bold text-[10px] uppercase tracking-widest">{item.align.part}</p>
                                     </div>
-                                    <p className="text-espresso/70 text-[14px] leading-relaxed font-light max-w-[400px] md:text-right relative z-10">
+                                    <p className="text-plum/70 text-[14px] leading-relaxed font-light max-w-[400px] md:text-right relative z-10">
                                         {item.align.desc}
                                     </p>
                                 </motion.div>
@@ -216,13 +216,13 @@ export default function ModernAlignFramework() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
                 >
-                    <div className="w-full h-[1px] bg-espresso/5 mb-8" />
+                    <div className="w-full h-[1px] bg-plum/5 mb-8" />
                     <p
                         className="italic leading-relaxed"
                         style={{
                             fontFamily: 'var(--font-garamond)',
                             fontSize: '26px',
-                            color: 'var(--color-deep-purple)'
+                            color: 'var(--color-plum)'
                         }}
                     >
                         &ldquo;This is not just a framework. It is a biological mapping of your leadership ecosystem.&rdquo;

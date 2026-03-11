@@ -11,10 +11,10 @@ export default function ModernNetwork() {
     ];
 
     return (
-        <section id="network" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 relative bg-alabaster/50">
+        <section id="network" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 relative bg-blush/30">
             {/* Architectural Grid Underlay */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(var(--color-espresso) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
+                style={{ backgroundImage: 'radial-gradient(var(--color-plum) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
             <div className="max-w-content mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-20 items-end mb-16">
@@ -39,7 +39,7 @@ export default function ModernNetwork() {
                         </motion.h2>
                     </div>
                     <motion.p
-                        className="text-espresso/60 text-[20px] leading-relaxed max-w-[500px] font-light"
+                        className="text-plum/60 text-[20px] leading-relaxed max-w-[500px] font-light"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -56,10 +56,10 @@ export default function ModernNetwork() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h3 className="text-[28px] md:text-[32px] font-outfit font-semibold text-espresso mb-6 leading-tight">No Tree Grows Alone.</h3>
-                        <div className="w-12 h-[2px] bg-gold/40 mb-8" />
+                        <h3 className="text-[28px] md:text-[32px] font-garamond font-medium text-plum mb-6 leading-tight">No Tree Grows Alone.</h3>
+                        <div className="w-12 h-[1px] bg-rose-gold/40 mb-8" />
 
-                        <div className="space-y-6 text-espresso/70 text-[15px] leading-relaxed font-light">
+                        <div className="space-y-6 text-plum/70 text-[15px] leading-relaxed font-light">
                             <p>
                                 Modern forest science has revealed one of nature&apos;s most extraordinary discoveries: trees do not grow alone. Beneath every ancient forest runs an invisible web of fungal networks — the mycelium — through which trees share nutrients, send chemical signals, and support each other&apos;s survival during periods of stress.
                             </p>
@@ -71,14 +71,14 @@ export default function ModernNetwork() {
 
                     <div className="relative">
                         <motion.div
-                            className="glass-card !bg-white/80 border-espresso/5 !p-12 relative z-10"
+                            className="glass-card !bg-white/70 border-plum/5 !p-12 relative z-10"
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 1 }}
                         >
-                            <h3 className="text-[28px] md:text-[32px] font-outfit font-semibold text-espresso mb-6 leading-tight">The Invisible Network</h3>
-                            <div className="w-12 h-[2px] bg-gold/40 mb-8" />
+                            <h3 className="text-[28px] md:text-[32px] font-garamond font-medium text-plum mb-6 leading-tight">The Invisible Network</h3>
+                            <div className="w-12 h-[1px] bg-rose-gold/40 mb-8" />
                             <div className="grid grid-cols-2 gap-x-8 gap-y-12">
                                 {stats.map((stat, idx) => (
                                     <motion.div
@@ -88,15 +88,15 @@ export default function ModernNetwork() {
                                         viewport={{ once: true }}
                                         transition={{ delay: idx * 0.1 }}
                                     >
-                                        <span className="text-gold font-outfit font-bold text-[32px] block mb-2">{stat.value}</span>
-                                        <span className="text-espresso/40 text-[11px] uppercase tracking-widest font-bold font-outfit">{stat.label}</span>
+                                        <span className="text-rose-gold font-garamond font-bold text-[32px] block mb-2">{stat.value}</span>
+                                        <span className="text-plum/40 text-[11px] uppercase tracking-widest font-bold font-outfit">{stat.label}</span>
                                     </motion.div>
                                 ))}
                             </div>
                         </motion.div>
 
                         {/* Background Geometric Decor */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-espresso/5 rounded-full pointer-events-none" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-plum/5 rounded-full pointer-events-none" />
                     </div>
                 </div>
 
@@ -108,13 +108,13 @@ export default function ModernNetwork() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
                 >
-                    <div className="w-full h-[1px] bg-espresso/5 mb-12" />
+                    <div className="w-full h-[1px] bg-plum/5 mb-12" />
                     <p
                         className="italic leading-snug"
                         style={{
                             fontFamily: 'var(--font-garamond)',
                             fontSize: '26px',
-                            color: 'var(--color-deep-purple)'
+                            color: 'var(--color-plum)'
                         }}
                     >
                         &ldquo;The most important question is not what you will learn. It is who you will learn it with.&rdquo;

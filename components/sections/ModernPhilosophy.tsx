@@ -31,10 +31,10 @@ export default function ModernPhilosophy() {
     ];
 
     return (
-        <section id="philosophy" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 relative bg-alabaster/50">
+        <section id="philosophy" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 relative bg-blush/30">
             {/* Architectural Grid Underlay */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(var(--color-espresso) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
+                style={{ backgroundImage: 'radial-gradient(var(--color-plum) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
             <div className="max-w-content mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-20 items-end mb-16">
@@ -59,7 +59,7 @@ export default function ModernPhilosophy() {
                         </motion.h2>
                     </div>
                     <motion.p
-                        className="text-espresso/60 text-[20px] leading-relaxed max-w-[500px] font-light"
+                        className="text-plum/60 text-[20px] leading-relaxed max-w-[500px] font-light"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -73,22 +73,22 @@ export default function ModernPhilosophy() {
                     {pillars.map((pillar, idx) => (
                         <motion.div
                             key={pillar.title}
-                            className="glass-card group !bg-white/90 h-full flex flex-col"
+                            className="glass-card group !bg-white/80 h-full flex flex-col"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1, duration: 0.8 }}
                         >
-                            <div className="w-10 h-10 border border-gold/30 rounded-full flex items-center justify-center mb-10 group-hover:bg-gold group-hover:text-white transition-all duration-500 shrink-0">
-                                <span className="text-gold group-hover:text-white font-outfit text-[12px] font-bold">0{idx + 1}</span>
+                            <div className="w-10 h-10 border border-sage/30 rounded-full flex items-center justify-center mb-10 group-hover:bg-sage group-hover:text-white transition-all duration-500 shrink-0">
+                                <span className="text-sage group-hover:text-white font-outfit text-[12px] font-bold">0{idx + 1}</span>
                             </div>
 
-                            <h3 className="text-[24px] font-outfit font-semibold text-espresso mb-6 shrink-0">{pillar.title}</h3>
-                            <div className="w-12 h-[2px] bg-gold/40 mb-6" />
+                            <h3 className="text-[24px] font-garamond font-medium text-plum mb-6 shrink-0">{pillar.title}</h3>
+                            <div className="w-12 h-[1px] bg-rose-gold/40 mb-6" />
 
                             <div className="space-y-4 flex-grow">
                                 {pillar.paragraphs.map((para, pIdx) => (
-                                    <p key={pIdx} className="text-espresso/70 leading-relaxed text-[15px] font-light">
+                                    <p key={pIdx} className="text-plum/70 leading-relaxed text-[15px] font-light">
                                         {para}
                                     </p>
                                 ))}
@@ -105,13 +105,13 @@ export default function ModernPhilosophy() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
                 >
-                    <div className="w-full h-[1px] bg-espresso/5 mb-12" />
+                    <div className="w-full h-[1px] bg-plum/5 mb-12" />
                     <p
                         className="italic leading-snug"
                         style={{
                             fontFamily: 'var(--font-garamond)',
                             fontSize: '26px',
-                            color: 'var(--color-deep-purple)'
+                            color: 'var(--color-plum)'
                         }}
                     >
                         &ldquo;A clear picture of where you are rooted, where you are growing, and how far your influence can reach.&rdquo;

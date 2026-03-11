@@ -50,14 +50,14 @@ export default function ModernFAQ() {
     const rightColumn = faqs.slice(4);
 
     return (
-        <section id="faq" className="pt-12 md:pt-20 pb-12 md:pb-20 px-6 relative bg-alabaster/50 overflow-hidden">
+        <section id="faq" className="pt-12 md:pt-20 pb-12 md:pb-20 px-6 relative bg-blush/30 overflow-hidden">
             {/* Architectural Grid Underlay (Matching Section 2) */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(var(--color-espresso) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
+                style={{ backgroundImage: 'radial-gradient(var(--color-plum) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
             {/* Subtle background flourishes */}
-            <div className="absolute top-1/4 right-0 w-64 h-64 border border-espresso/5 rounded-full translate-x-1/2 pointer-events-none" />
-            <div className="absolute bottom-1/4 left-0 w-96 h-96 border border-gold/10 rounded-full -translate-x-1/2 pointer-events-none" />
+            <div className="absolute top-1/4 right-0 w-64 h-64 border border-plum/5 rounded-full translate-x-1/2 pointer-events-none" />
+            <div className="absolute bottom-1/4 left-0 w-96 h-96 border border-rose-gold/10 rounded-full -translate-x-1/2 pointer-events-none" />
 
             <div className="max-w-content mx-auto relative z-10">
                 <div className="mb-10 md:mb-16">
@@ -89,7 +89,7 @@ export default function ModernFAQ() {
                             return (
                                 <motion.div
                                     key={idx}
-                                    className="glass-card group !bg-white/80 border-gold/10 hover:border-gold/30 transition-all duration-500"
+                                    className="glass-card group !bg-white/70 border-rose-gold/10 hover:border-rose-gold/30 transition-all duration-500"
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
@@ -99,10 +99,10 @@ export default function ModernFAQ() {
                                         onClick={() => toggleFaq(idx)}
                                         className="w-full flex items-start justify-between text-left"
                                     >
-                                        <h3 className="text-[18px] md:text-[20px] font-outfit font-semibold text-espresso pr-8 transition-colors group-hover:text-gold leading-tight">
+                                        <h3 className="text-[18px] md:text-[20px] font-garamond font-medium text-plum pr-8 transition-colors group-hover:text-rose-gold leading-tight">
                                             {faq.question}
                                         </h3>
-                                        <div className="shrink-0 mt-1 text-gold/50 group-hover:text-gold transition-colors">
+                                        <div className="shrink-0 mt-1 text-rose-gold/50 group-hover:text-rose-gold transition-colors">
                                             {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                                         </div>
                                     </button>
@@ -116,8 +116,8 @@ export default function ModernFAQ() {
                                                 transition={{ duration: 0.4, ease: "easeInOut" }}
                                                 className="overflow-hidden"
                                             >
-                                                <div className="w-12 h-[1px] bg-gold/30 mt-6 mb-6" />
-                                                <p className="text-espresso/70 leading-relaxed text-[15px] md:text-[16px] font-light">
+                                                <div className="w-12 h-[1px] bg-rose-gold/30 mt-6 mb-6" />
+                                                <p className="text-plum/70 leading-relaxed text-[15px] md:text-[16px] font-light">
                                                     {faq.answer}
                                                 </p>
                                             </motion.div>
@@ -136,7 +136,7 @@ export default function ModernFAQ() {
                             return (
                                 <motion.div
                                     key={faqIdx}
-                                    className="glass-card group !bg-white/80 border-gold/10 hover:border-gold/30 transition-all duration-500"
+                                    className="glass-card group !bg-white/70 border-rose-gold/10 hover:border-rose-gold/30 transition-all duration-500"
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
@@ -146,10 +146,10 @@ export default function ModernFAQ() {
                                         onClick={() => toggleFaq(faqIdx)}
                                         className="w-full flex items-start justify-between text-left"
                                     >
-                                        <h3 className="text-[18px] md:text-[20px] font-outfit font-semibold text-espresso pr-8 transition-colors group-hover:text-gold leading-tight">
+                                        <h3 className="text-[18px] md:text-[20px] font-garamond font-medium text-plum pr-8 transition-colors group-hover:text-rose-gold leading-tight">
                                             {faq.question}
                                         </h3>
-                                        <div className="shrink-0 mt-1 text-gold/50 group-hover:text-gold transition-colors">
+                                        <div className="shrink-0 mt-1 text-rose-gold/50 group-hover:text-rose-gold transition-colors">
                                             {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                                         </div>
                                     </button>
@@ -163,8 +163,8 @@ export default function ModernFAQ() {
                                                 transition={{ duration: 0.4, ease: "easeInOut" }}
                                                 className="overflow-hidden"
                                             >
-                                                <div className="w-12 h-[1px] bg-gold/30 mt-6 mb-6" />
-                                                <p className="text-espresso/70 leading-relaxed text-[15px] md:text-[16px] font-light">
+                                                <div className="w-12 h-[1px] bg-rose-gold/30 mt-6 mb-6" />
+                                                <p className="text-plum/70 leading-relaxed text-[15px] md:text-[16px] font-light">
                                                     {faq.answer}
                                                 </p>
                                             </motion.div>

@@ -30,16 +30,16 @@ export default function ModernWhoThisIsFor() {
     ];
 
     return (
-        <section id="who" className="pt-20 md:pt-32 pb-16 md:pb-24 px-6 bg-stone relative overflow-hidden">
+        <section id="who" className="pt-20 md:pt-32 pb-16 md:pb-24 px-6 bg-petal relative overflow-hidden">
             {/* Architectural Background Elements */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(var(--color-espresso) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
+                style={{ backgroundImage: 'radial-gradient(var(--color-plum) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] border border-espresso/5 rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] border border-gold/10 rounded-full translate-y-1/3 translate-x-1/4 pointer-events-none" />
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] border border-plum/5 rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] border border-rose-gold/10 rounded-full translate-y-1/3 translate-x-1/4 pointer-events-none" />
 
-            <div className="absolute top-1/2 right-0 w-px h-64 bg-gradient-to-b from-transparent via-espresso/5 to-transparent pointer-events-none" />
-            <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/5 to-transparent pointer-events-none" />
+            <div className="absolute top-1/2 right-0 w-px h-64 bg-gradient-to-b from-transparent via-plum/5 to-transparent pointer-events-none" />
+            <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-rose-gold/5 to-transparent pointer-events-none" />
 
             <div className="max-w-content mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-20 items-end mb-16">
@@ -64,7 +64,7 @@ export default function ModernWhoThisIsFor() {
                         </motion.h2>
                     </div>
                     <motion.p
-                        className="text-espresso/60 text-[20px] leading-relaxed max-w-[500px] font-light italic"
+                        className="text-plum/60 text-[20px] leading-relaxed max-w-[500px] font-light italic"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -78,33 +78,33 @@ export default function ModernWhoThisIsFor() {
                     {readiness.map((card, idx) => (
                         <motion.div
                             key={card.title}
-                            className={`glass-card flex flex-col items-start !bg-white/40 !p-8 border-espresso/5 shadow-sm relative group overflow-hidden`}
+                            className={`glass-card flex flex-col items-start !bg-white/50 !p-8 border-plum/5 shadow-sm relative group overflow-hidden`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
                         >
-                            {/* Card Watermark - Increased visibility */}
-                            <div className="absolute top-10 right-10 text-[120px] font-outfit font-bold text-gold/[0.08] leading-none pointer-events-none group-hover:text-gold/[0.15] transition-all duration-700">
+                            {/* Card Watermark */}
+                            <div className="absolute top-10 right-10 text-[120px] font-garamond font-bold text-rose-gold/[0.08] leading-none pointer-events-none group-hover:text-rose-gold/[0.15] transition-all duration-700">
                                 0{idx + 1}
                             </div>
 
                             {/* Corner Marks */}
-                            <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-gold/20" />
-                            <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-gold/20" />
+                            <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-rose-gold/20" />
+                            <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-rose-gold/20" />
 
-                            <h3 className="text-[24px] font-outfit font-semibold text-espresso mb-6 uppercase tracking-tight relative z-10">
+                            <h3 className="text-[24px] font-garamond font-medium text-plum mb-6 uppercase tracking-tight relative z-10">
                                 {card.title}
                             </h3>
-                            <div className="w-12 h-[2px] bg-gold/40 mb-6 relative z-10" />
+                            <div className="w-12 h-[1px] bg-rose-gold/40 mb-6 relative z-10" />
 
                             <ul className="space-y-6 relative z-10">
                                 {card.items.map((item, iIdx) => (
                                     <li key={iIdx} className="flex gap-4 group/item">
-                                        <span className={`shrink-0 w-6 h-6 flex items-center justify-center rounded-sm border border-gold/10 text-[10px] font-bold transition-all duration-300 group-hover/item:border-gold/40 ${idx === 0 ? 'text-gold bg-gold/5' : 'text-espresso/40 bg-espresso/5'}`}>
+                                        <span className={`shrink-0 w-6 h-6 flex items-center justify-center rounded-full border border-sage/10 text-[10px] font-bold transition-all duration-300 group-hover/item:border-sage/40 ${idx === 0 ? 'text-sage bg-sage/5' : 'text-plum/40 bg-plum/5'}`}>
                                             {card.symbol}
                                         </span>
-                                        <p className="text-espresso/70 text-[14px] leading-relaxed font-light">
+                                        <p className="text-plum/70 text-[14px] leading-relaxed font-light">
                                             {item}
                                         </p>
                                     </li>
@@ -122,13 +122,13 @@ export default function ModernWhoThisIsFor() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
                 >
-                    <div className="w-full h-[1px] bg-espresso/5 mb-12" />
+                    <div className="w-full h-[1px] bg-plum/5 mb-12" />
                     <p
                         className="italic leading-snug"
                         style={{
                             fontFamily: 'var(--font-garamond)',
                             fontSize: '26px',
-                            color: 'var(--color-deep-purple)'
+                            color: 'var(--color-plum)'
                         }}
                     >
                         &ldquo;An intensive curated for the specific psychological density of elite women leaders. This is not for those seeking growth, but for those architecting expansion.&rdquo;

@@ -23,7 +23,7 @@ export default function AlignmentCore({ scrollProgress = 0 }: { scrollProgress?:
     );
 
     return (
-        <div className="canvas-container overflow-hidden bg-[#F7F4F0] flex items-center justify-center pt-20 md:pt-24 fixed inset-0 pointer-events-none">
+        <div className="canvas-container overflow-hidden bg-petal flex items-center justify-center pt-20 md:pt-24 fixed inset-0 pointer-events-none">
             {/* 
                 Legacy Portrait (woman.png)
                 Set to static position with high-quality rendering.
@@ -47,11 +47,11 @@ export default function AlignmentCore({ scrollProgress = 0 }: { scrollProgress?:
 
             {/* Subtle atmospheric glow to integrate the structure into the site theme */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute w-full h-full opacity-[0.08] bg-[radial-gradient(circle_at_center,_rgba(197,160,89,0.1)_0%,_transparent_70%)]" />
+                <div className="absolute w-full h-full opacity-[0.1] bg-[radial-gradient(circle_at_center,_var(--color-rose-gold-soft)_0%,_transparent_70%)]" />
             </div>
 
             {/* Soft architectural fades to bridge sections */}
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#F7F4F0] via-transparent to-[#F7F4F0] opacity-40" />
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-petal via-transparent to-petal opacity-40" />
         </div>
     );
 }

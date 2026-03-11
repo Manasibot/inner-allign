@@ -48,16 +48,16 @@ export default function ModernOutcomes() {
     ];
 
     return (
-        <section id="outcomes" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-stone relative overflow-hidden">
+        <section id="outcomes" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-petal relative overflow-hidden">
             {/* Architectural Background Elements (Matched with Section 3) */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(var(--color-espresso) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
+                style={{ backgroundImage: 'radial-gradient(var(--color-plum) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] border border-espresso/5 rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] border border-gold/10 rounded-full translate-y-1/3 translate-x-1/4 pointer-events-none" />
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] border border-plum/5 rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] border border-rose-gold/10 rounded-full translate-y-1/3 translate-x-1/4 pointer-events-none" />
 
-            <div className="absolute top-1/2 right-0 w-px h-64 bg-gradient-to-b from-transparent via-espresso/5 to-transparent pointer-events-none" />
-            <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/5 to-transparent pointer-events-none" />
+            <div className="absolute top-1/2 right-0 w-px h-64 bg-gradient-to-b from-transparent via-plum/5 to-transparent pointer-events-none" />
+            <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-rose-gold/5 to-transparent pointer-events-none" />
 
             <div className="max-w-content mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-20 items-end mb-16">
@@ -82,7 +82,7 @@ export default function ModernOutcomes() {
                         </motion.h2>
                     </div>
                     <motion.p
-                        className="text-espresso/60 text-[20px] leading-relaxed max-w-[500px] font-light"
+                        className="text-plum/60 text-[20px] leading-relaxed max-w-[500px] font-light"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -96,19 +96,19 @@ export default function ModernOutcomes() {
                     {outcomes.map((outcome, idx) => (
                         <motion.div
                             key={outcome.title}
-                            className="glass-card !p-8 !bg-white/40 hover:!bg-white/80 transition-all border-espresso/5 flex flex-col items-center text-center h-full"
+                            className="glass-card !p-8 !bg-white/50 hover:!bg-white/80 transition-all border-plum/5 flex flex-col items-center text-center h-full"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
                         >
-                            <div className="text-gold mb-6 p-3 bg-gold-soft rounded-full shrink-0">
+                            <div className="text-sage mb-6 p-4 bg-sage/5 rounded-full shrink-0">
                                 {outcome.icon}
                             </div>
-                            <h3 className="text-[18px] font-outfit font-semibold text-espresso mb-3 leading-snug">
+                            <h3 className="text-[18px] font-garamond font-medium text-plum mb-3 leading-snug">
                                 {outcome.title}
                             </h3>
-                            <p className="text-espresso/60 text-[14px] leading-relaxed font-light mt-auto">
+                            <p className="text-plum/60 text-[14px] leading-relaxed font-light mt-auto">
                                 {outcome.desc}
                             </p>
                         </motion.div>
@@ -123,13 +123,13 @@ export default function ModernOutcomes() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.3, duration: 1 }}
                 >
-                    <div className="w-full h-[1px] bg-espresso/5 mb-10 md:mb-12" />
+                    <div className="w-full h-[1px] bg-plum/5 mb-10 md:mb-12" />
                     <p
                         className="italic leading-snug"
                         style={{
                             fontFamily: 'var(--font-garamond)',
                             fontSize: '26px',
-                            color: 'var(--color-deep-purple)'
+                            color: 'var(--color-plum)'
                         }}
                     >
                         &ldquo;These are not promises. They are the documented results of the structure you are about to enter.&rdquo;

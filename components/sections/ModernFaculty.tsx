@@ -5,23 +5,23 @@ import { Linkedin, Globe, Instagram } from 'lucide-react';
 
 export default function ModernFaculty() {
     return (
-        <section id="faculty" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-stone relative overflow-hidden">
+        <section id="faculty" className="pt-20 md:pt-32 pb-20 md:pb-32 px-6 bg-petal relative overflow-hidden">
             {/* Architectural Background Elements (Matched with Section 3) */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(var(--color-espresso) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
+                style={{ backgroundImage: 'radial-gradient(var(--color-plum) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] border border-espresso/5 rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] border border-gold/10 rounded-full translate-y-1/3 translate-x-1/4 pointer-events-none" />
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] border border-plum/5 rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] border border-rose-gold/10 rounded-full translate-y-1/3 translate-x-1/4 pointer-events-none" />
 
-            <div className="absolute top-1/2 right-0 w-px h-64 bg-gradient-to-b from-transparent via-espresso/5 to-transparent pointer-events-none" />
-            <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/5 to-transparent pointer-events-none" />
+            <div className="absolute top-1/2 right-0 w-px h-64 bg-gradient-to-b from-transparent via-plum/5 to-transparent pointer-events-none" />
+            <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-rose-gold/5 to-transparent pointer-events-none" />
 
             <div className="max-w-content mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-20 items-start">
                     {/* LEFT COLUMN — Portrait + Name */}
                     <div className="relative">
                         <motion.div
-                            className="aspect-[4/5] glass-card overflow-hidden relative group border-espresso/5 !bg-stone"
+                            className="aspect-[4/5] glass-card overflow-hidden relative group border-plum/5 !bg-petal"
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -31,34 +31,32 @@ export default function ModernFaculty() {
                             <img
                                 src="/Ramona Rodrigues.png"
                                 alt="Ramona Faria Rodrigues"
-                                className="absolute inset-0 w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                                className="absolute inset-0 w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-stone/20 mix-blend-multiply transition-opacity group-hover:opacity-0" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-stone via-transparent to-transparent z-10" />
+                            <div className="absolute inset-0 bg-blush/10 mix-blend-multiply transition-opacity group-hover:opacity-0" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-petal via-transparent to-transparent z-10" />
 
-                            {/* White credential strip inside image */}
+                            {/* Credential strip inside image */}
                             <motion.div
-                                className="absolute bottom-6 left-6 right-6 z-20 glass-card !p-5 border-gold/20 !bg-white/90"
+                                className="absolute bottom-6 left-6 right-6 z-20 glass-card !p-5 border-rose-gold/20 !bg-white/95"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.5 }}
                             >
-                                <p className="text-gold text-[12px] font-light tracking-wide text-center italic flex items-center justify-center gap-1">
+                                <p className="text-rose-gold text-[12px] font-garamond tracking-wide text-center italic flex items-center justify-center gap-2">
                                     <span>Certified Psychometric Analyst</span>
-                                    <span className="text-espresso text-[20px] not-italic leading-none flex items-center">·</span>
+                                    <span className="text-plum text-[20px] not-italic leading-none flex items-center">·</span>
                                     <span>Behavioural Trainer</span>
-                                    <span className="text-espresso text-[20px] not-italic leading-none flex items-center">·</span>
+                                    <span className="text-plum text-[20px] not-italic leading-none flex items-center">·</span>
                                     <span>NLP Practitioner</span>
                                 </p>
                             </motion.div>
                         </motion.div>
 
-
-
                         {/* Architectural Grid behind portrait */}
-                        <div className="absolute -top-12 -left-12 w-64 h-64 border border-espresso/5 rounded-full" />
-                        <div className="absolute -bottom-10 -right-10 w-48 h-48 border border-gold/10 rounded-full" />
+                        <div className="absolute -top-12 -left-12 w-64 h-64 border border-plum/5 rounded-full" />
+                        <div className="absolute -bottom-10 -right-10 w-48 h-48 border border-rose-gold/10 rounded-full" />
                     </div>
 
                     {/* RIGHT COLUMN — Content */}
@@ -75,7 +73,7 @@ export default function ModernFaculty() {
 
                         {/* 2. Pre-heading */}
                         <motion.p
-                            className="text-gold text-[14px] uppercase tracking-[0.2em] font-bold mb-3"
+                            className="text-rose-gold text-[14px] uppercase tracking-[0.2em] font-bold mb-3"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
@@ -108,14 +106,14 @@ export default function ModernFaculty() {
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-12 h-12 rounded-full flex items-center justify-center border-2 border-gold/30 bg-white/5 text-gold/80 hover:text-white hover:bg-gold hover:border-gold transition-all duration-300 relative group shadow-sm shadow-gold/5"
+                                    className="w-12 h-12 rounded-full flex items-center justify-center border-2 border-rose-gold/30 bg-white/5 text-rose-gold hover:text-white hover:bg-rose-gold hover:border-rose-gold transition-all duration-300 relative group shadow-sm shadow-rose-gold/5"
                                     initial={{ opacity: 0, y: 10 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.1 * idx }}
                                     aria-label={social.label}
                                 >
-                                    <div className="absolute inset-0 rounded-full bg-gold/20 scale-0 group-hover:scale-110 transition-transform duration-500 blur-xl opacity-0 group-hover:opacity-60" />
+                                    <div className="absolute inset-0 rounded-full bg-rose-gold/20 scale-0 group-hover:scale-110 transition-transform duration-500 blur-xl opacity-0 group-hover:opacity-60" />
                                     <span className="relative z-10 transition-transform duration-300 group-hover:scale-110">
                                         {social.icon}
                                     </span>
@@ -123,22 +121,22 @@ export default function ModernFaculty() {
                             ))}
                         </div>
 
-                        {/* 4. Gold Credential Bar */}
+                        {/* 4. Credential Bar */}
                         <motion.div
-                            className="flex items-center gap-4 py-3 px-5 bg-gold/5 border border-gold/20 rounded-sm mb-10"
+                            className="flex items-center gap-4 py-3 px-5 bg-rose-gold/5 border border-rose-gold/20 rounded-full mb-10"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
                         >
-                            <span className="text-gold text-[12px] uppercase tracking-widest font-bold">
+                            <span className="text-rose-gold text-[12px] uppercase tracking-widest font-bold">
                                 Certified Psychometric Analyst  ·  NLP Practitioner  ·  Behavioural Trainer
                             </span>
                         </motion.div>
 
                         {/* 5. Philosophy Paragraph */}
                         <motion.p
-                            className="text-espresso/60 text-[14px] leading-[1.8] mb-8 italic border-l-2 border-gold/20 pl-6 font-light"
+                            className="text-plum/60 text-[14px] leading-[1.8] mb-8 italic border-l-2 border-rose-gold/20 pl-6 font-light"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
@@ -149,7 +147,7 @@ export default function ModernFaculty() {
 
                         {/* 6. Career Paragraph */}
                         <motion.p
-                            className="text-espresso/60 text-[16px] leading-[1.7] mb-10 font-light"
+                            className="text-plum/60 text-[16px] leading-[1.7] mb-10 font-light"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
@@ -175,7 +173,7 @@ export default function ModernFaculty() {
                                 'Talent Measurement Assessor',
                                 'Experience Design Consultant'
                             ].map(tag => (
-                                <span key={tag} className="text-[10px] uppercase tracking-widest font-bold text-gold border border-gold/20 px-3 py-1.5 rounded-sm">
+                                <span key={tag} className="text-[10px] uppercase tracking-widest font-bold text-rose-gold border border-rose-gold/20 px-3 py-1.5 rounded-full">
                                     {tag}
                                 </span>
                             ))}
